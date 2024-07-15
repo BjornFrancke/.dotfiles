@@ -130,6 +130,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="/Users/bjorn/google-cloud-sdk/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/bin/:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/bjorn/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bjorn/google-cloud-sdk/path.zsh.inc'; fi
