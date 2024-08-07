@@ -22,6 +22,9 @@
     <keyboard-shortcut first-keystroke="ctrl right" />
     <keyboard-shortcut first-keystroke="shift ctrl meta alt right" />
   </action>
+  <action id="PinActiveEditorTab">
+    <keyboard-shortcut first-keystroke="shift ctrl meta alt p" />
+  </action>
   <action id="PreviousTab">
     <keyboard-shortcut first-keystroke="ctrl left" />
     <keyboard-shortcut first-keystroke="shift ctrl meta alt left" />
