@@ -10,6 +10,14 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+echo ".--------------------------------.";
+echo "|                                |";
+echo "|  ░█▀▀░█▀▄░█▀█░█▀█░█▀▀░█░█░█▀▀  |";
+echo "|  ░█▀▀░█▀▄░█▀█░█░█░█░░░█▀▄░█▀▀  |";
+echo "|  ░▀░░░▀░▀░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀  |";
+echo "|                                |";
+echo "'--------------------------------'";
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -193,3 +201,4 @@ _fzf_comprun() {
     *)            fzf --preview "bat -n --color=always --line-range :500 {}" "$@" ;;
   esac
 }
+
