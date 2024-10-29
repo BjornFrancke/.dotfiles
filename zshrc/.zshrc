@@ -124,6 +124,7 @@ source $ZSH/oh-my-zsh.sh
 alias lc='colorls --sd'
 alias lcc='colorls -a --sd'
 alias onote='open -a coteditor'
+alias upbrew='brew update && brew upgrade'
 export PATH=/opt/homebrew/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
 eval 
 
