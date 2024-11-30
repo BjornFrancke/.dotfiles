@@ -1,0 +1,27 @@
+
+theme = "dracula_at_night"
+
+[editor]
+line-number	= "relative"
+color-modes	= true
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type", "version-control"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+enable = true
+display-inlay-hints = true
+display-messages = true
+display-signature-help-docs	= true
+
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
