@@ -138,3 +138,4 @@ export HERD_PHP_83_INI_SCAN_DIR="/Users/bjorn/Library/Application Support/Herd/c
 # Herd injected PHP binary.
 export PATH="/Users/bjorn/Library/Application Support/Herd/bin/":$PATH
 . "/Users/bjorn/.deno/env"
+export PATH="$(yarn global bin):$PATH"
