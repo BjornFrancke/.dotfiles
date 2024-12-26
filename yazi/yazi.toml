@@ -1,0 +1,12 @@
+[manager]
+show_hidden    = false
+title_format   = "Yazi: {cwd}"
+
+
+
+[opener]
+edit = [
+	{ run = '${EDITOR:-hx} "$@"', desc = "$EDITOR", block = true, for = "unix" },
+	{ run = 'code %*',    orphan = true, desc = "code",           for = "windows" },
+	{ run = 'code -w %*', block = true,  desc = "code (block)",   for = "windows" },
+]
