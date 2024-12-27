@@ -77,7 +77,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git macos)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -119,8 +119,10 @@ alias brewup='brew update && brew upgrade'
 alias y='yarn'
 alias yd='yarn dev'
 alias lg='lazygit'
+alias ze='zellij'
 alias yaze='zellij -l welcome --config-dir ~/.config/yazelix/zellij options --layout-dir ~/.config/yazelix/zellij/layout'
 alias yase='nu -c "zellij -l welcome --config-dir ~/.config/yazelix/zellij options --layout-dir ~/.config/yazelix/zellij/layouts"'
+alias sidepanel='env YAZI_CONFIG_HOME=~/.config/yazelix/yazi/sidebar yazi'
 
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
