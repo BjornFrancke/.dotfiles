@@ -6,6 +6,8 @@ brew "bat"
 brew "git"
 # Post-modern modal text editor
 brew "helix"
+# Modern shell for the GitHub era
+brew "nushell"
 # Theme for zsh
 brew "powerlevel10k"
 # Powerful, clean, object-oriented scripting language
@@ -20,6 +22,10 @@ brew "taplo"
 brew "tmux"
 # Watch files and take action when they change
 brew "watchman"
+# Blazing fast terminal file manager written in Rust, based on async I/O
+brew "yazi"
+# Pluggable terminal workspace, with terminal multiplexer as the base feature
+brew "zellij"
 # Real-time type-ahead completion for Zsh
 brew "zsh-autocomplete"
 # Fish-like fast/unobtrusive autosuggestions for zsh
@@ -44,6 +50,8 @@ cask "kitty"
 cask "protonvpn"
 # Control your tools with a few keystrokes
 cask "raycast"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
+cask "wezterm"
 vscode "bradlc.vscode-tailwindcss"
 vscode "dbaeumer.vscode-eslint"
 vscode "esbenp.prettier-vscode"
