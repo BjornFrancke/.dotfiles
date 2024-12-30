@@ -4,6 +4,7 @@ theme = "dracula_at_night"
 [editor]
 line-number	= "relative"
 color-modes	= true
+auto-pairs = true
 
 [editor.statusline]
 left = ["mode", "spinner"]
@@ -23,10 +24,11 @@ display-signature-help-docs	= true
 
 [editor.indent-guides]
 render = true
-character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
 skip-levels = 1
 
 
 # ~/.config/helix/config.toml
 [keys.normal]
+# Only works without Yazelix
 C-y = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/yazi-picker.sh open"
