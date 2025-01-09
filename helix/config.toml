@@ -6,6 +6,9 @@ line-number	= "relative"
 color-modes	= true
 auto-pairs = true
 
+[editor.soft-wrap]
+enable = true
+
 [editor.statusline]
 left = ["mode", "spinner"]
 center = ["file-name"]
@@ -17,7 +20,7 @@ mode.select = "SELECT"
 
 [editor.lsp]
 enable = true
-display-inlay-hints = true
+display-inlay-hints = false
 display-messages = true
 display-signature-help-docs	= true
 
@@ -32,3 +35,7 @@ skip-levels = 1
 [keys.normal]
 # Only works without Yazelix
 C-y = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/yazi-picker.sh open"
+
+
+[keys.normal.space]
+i = ":toggle lsp.display-inlay-hints"
