@@ -2,10 +2,15 @@
 # Ghostty Configuration
 # ----------------------------------------
 
-
 macos-option-as-alt = right
-macos-titlebar-style = hidden
+macos-titlebar-style = tabs
 background = 0E1418
+
+
+# ----------------------------------------
+# Fonts
+# ----------------------------------------
+
 font-size = 17
 font-feature = liga
 font-thicken = true
