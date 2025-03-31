@@ -111,18 +111,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Aliases
-alias lc='colorls -lA --sd' 
-alias lcg='colorls --gs -t'
-alias zshconfig='code ~/.zshrc'
-alias p10color='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done'
-alias brewup='brew update && brew upgrade'
-alias y='yarn'
-alias yd='yarn dev'
-alias lg='lazygit'
-alias ze='zellij'
-alias yaze='zellij -l welcome --config-dir ~/.config/yazelix/zellij options --layout-dir ~/.config/yazelix/zellij/layout'
-alias yase='nu -c "zellij -l welcome --config-dir ~/.config/yazelix/zellij options --layout-dir ~/.config/yazelix/zellij/layouts"'
-alias sidepanel='env YAZI_CONFIG_HOME=~/.config/yazelix/yazi/sidebar yazi'
+source ~/dotfiles/zshrc/aliases.zsh
 
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -143,13 +132,30 @@ export PATH="/opt/homebrew/opt/ruby@3.1/bin:$PATH"
 export PATH="/opt/homebrew/lib/ruby/gems/3.1.0/bin:$PATH"
 
 
-
-
-
-
-
-
 # Dprint (formatting helix)
 export DPRINT_INSTALL="/Users/bjorn/.dprint"
 export PATH="$DPRINT_INSTALL/bin:$PATH"
 
+
+
+# Herd injected PHP 8.4 configuration.
+export HERD_PHP_84_INI_SCAN_DIR="/Users/bjorn/Library/Application Support/Herd/config/php/84/"
+
+
+# Herd injected PHP binary.
+export PATH="/Users/bjorn/Library/Application Support/Herd/bin/":$PATH
+
+
+# Herd injected PHP 7.4 configuration.
+export HERD_PHP_74_INI_SCAN_DIR="/Users/bjorn/Library/Application Support/Herd/config/php/74/"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/bjorn/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bjorn/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/bjorn/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bjorn/google-cloud-sdk/completion.zsh.inc'; fi
+alias lzd='lazydocker'
+
+
+# Herd injected PHP 8.2 configuration.
+export HERD_PHP_82_INI_SCAN_DIR="/Users/bjorn/Library/Application Support/Herd/config/php/82/"
