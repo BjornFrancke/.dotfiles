@@ -2,6 +2,7 @@
 # Ghostty Configuration
 # ----------------------------------------
 
+theme = flexoki-dark
 macos-option-as-alt = right
 macos-titlebar-style = tabs
 background = 0E1418
