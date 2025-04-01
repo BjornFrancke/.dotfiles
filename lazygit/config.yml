@@ -1,2 +1,15 @@
 os:
-  editPreset: 'hx'
+  editPreset: "hx"
+
+gui:
+  nerdFontsVersion: "3"
+  sidePanelWidth: 0.3333
+  expandFocusedSidePanel: false
+  mainPanelSplitMode: flexible
+  branchColors:
+    "release": "#eed49f"
+    "hotfix": "#ed8796"
+    "fix": "#ffb454"
+    "refactor": "#41A9A0"
+    "feat": "#a6da95"
+    "production": "#4CFF64"
