@@ -14,7 +14,14 @@ return {
 		{
 			"<leader>fp",
 			function()
-				require("neo-tree.command").execute({ reveal = true, position = "right" })
+				require("neo-tree.command").execute({ open = true, position = "right", toggle = "true" })
+			end,
+			desc = "Reveal in Explorer",
+		},
+		{
+			"<leader>fo",
+			function()
+				require("neo-tree.command").execute({ focus = true, position = "right" })
 			end,
 			desc = "Reveal in Explorer",
 		},

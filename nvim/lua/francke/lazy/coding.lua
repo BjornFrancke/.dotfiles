@@ -3,14 +3,14 @@ return {
 		"brenoprata10/nvim-highlight-colors",
 		opts = {
 			enable_tailwind = true,
-			render = 'virtual',
+			render = "virtual",
 		},
 	},
 	{
 		"tris203/precognition.nvim",
 		--event = "VeryLazy",
 		opts = {
-			startVisible = true,
+			startVisible = false,
 			-- showBlankVirtLine = true,
 			-- highlightColor = { link = "Comment" },
 			-- hints = {
@@ -34,6 +34,15 @@ return {
 			-- disabled_fts = {
 			--     "startify",
 			-- },
+		},
+		keys = {
+			{
+				"<leader>pt",
+				function()
+					require("precognition").toggle()
+				end,
+				desc = "Precognition Toggle",
+			},
 		},
 	},
 }
