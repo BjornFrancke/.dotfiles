@@ -44,6 +44,13 @@ ln -s ~/Documents/example.txt ~/Desktop/example.txt
 ## Commands to remember
 
 - Dump brewfiles to dotfiles dir
+
   ```bash
   brew bundle dump --file ~/dotfiles/Brewfile --force --describe
   ```
+
+- Hide default login message
+
+```base
+touch ~/.hushlogin
+```
