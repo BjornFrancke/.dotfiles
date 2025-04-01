@@ -6,6 +6,7 @@ alias p10color='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f
 
 alias y='yarn'
 alias yd='yarn dev'
+alias bunfo='bun prettier --write "src/**/*.{ts,js}"'
 alias lg='lazygit'
 alias ze='zellij -l welcome'
 alias yaze='zellij -l welcome --config-dir ~/.config/yazelix/zellij options --layout-dir ~/.config/yazelix/zellij/layout'
