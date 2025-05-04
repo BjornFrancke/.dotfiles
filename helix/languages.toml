@@ -102,3 +102,15 @@ typescript = { tsdk = "./node_modules/typescript/lib" }
 [[language]]
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"] }
+
+[[language]]
+name = "go"
+auto-format = true
+text-width = 180
+formatter = { command = "goimports" }
+roots = ["go.work", "go.mod"]
+language-servers = [ "gopls" ]
+
+
+[language-server.gopls]
+command = "gopls"
