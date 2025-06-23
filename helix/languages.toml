@@ -103,14 +103,64 @@ typescript = { tsdk = "./node_modules/typescript/lib" }
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"] }
 
+# [[language]]
+# name = "go"
+# auto-format = true
+# text-width = 180
+# formatter = { command = "goimports" }
+# roots = ["go.work", "go.mod"]
+# language-servers = [ "gopls" ]
+
+
+# [language-server.gopls]
+# command = "gopls"
+
+# [[language]]
+# name = "go"
+# config = { "formatting.gofumpt" = true }
+
 [[language]]
 name = "go"
-auto-format = true
-text-width = 180
-formatter = { command = "goimports" }
+scope = "source.go"
+injection-regex = "go"
+file-types = ["go"]
 roots = ["go.work", "go.mod"]
-language-servers = [ "gopls" ]
-
+auto-format = true
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = [ "gopls", "golangci-lint-lsp" ]
+# TODO: gopls needs utf-8 offsets?
+indent = { tab-width = 4, unit = "\t" }
 
 [language-server.gopls]
 command = "gopls"
+
+[language-server.gopls.config.hints]
+assignVariableTypes = true
+compositeLiteralFields = true
+constantValues = true
+functionTypeParameters = true
+parameterNames = true
+rangeVariableTypes = true
+
+
+[language-server.golangci-lint-lsp]
+command = "golangci-lint-langserver"
+
+# [language-server.golangci-lint-lsp.config]
+# command = ["golangci-lint", "run", "--out-format=json", "--issues-exit-code=1"]
+
+[language-server.golangci-lint-lsp.config]
+command = [
+  "golangci-lint",
+  "run",
+  "--output.json.path",
+  "stdout",
+  "--show-stats=false",
+  "--issues-exit-code=1"
+]
+
+[[grammar]]
+name = "go"
+source = { git = "https://github.com/tree-sitter/tree-sitter-go", rev = "64457ea6b73ef5422ed1687178d4545c3e91334a" }
+ 
