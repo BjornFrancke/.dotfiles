@@ -3,7 +3,7 @@
 # ----------------------------------------
 
 theme = ayu
-macos-option-as-alt = right
+macos-option-as-alt = false
 macos-titlebar-style = tabs
 background = 0E1418
 
@@ -33,7 +33,11 @@ window-padding-y = 5
 # Dock icon
 # ----------------------------------------
 
-macos-icon = custom-style
-macos-icon-ghost-color = ffffff
-macos-icon-frame = plastic
-macos-icon-screen-color = dark grey,black
+#macos-icon = custom-style
+#macos-icon-ghost-color = ffffff
+#macos-icon-frame = plastic
+#macos-icon-screen-color = dark grey,black
+
+macos-icon = holographic
+
+keybind = shift+enter=text:\n
