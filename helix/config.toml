@@ -5,12 +5,14 @@ theme = "dracula_at_night"
 line-number	= "relative"
 color-modes	= true
 auto-pairs = true
+clipboard-provider = "termcode"
+auto-completion = true
 
 [editor.soft-wrap]
 enable = true
 
 [editor.statusline]
-left = ["mode", "spinner"]
+left = ["mode", "spinner", "file-modification-indicator", "version-control",]
 center = ["file-name"]
 right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type", "version-control"]
 separator = "│"
@@ -18,13 +20,20 @@ mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
 
+[editor.whitespace]
+space = "none"
+nbsp = "none"
+tab = "none"
+newline = "none"
+
+
 [editor.lsp]
 enable = true
 display-inlay-hints = false
 display-messages = true
 display-signature-help-docs	= true
 
-
+ 
 [editor.indent-guides]
 render = true
 character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
@@ -35,7 +44,15 @@ skip-levels = 1
 [keys.normal]
 # Only works without Yazelix
 A-y = ":sh zellij run -c -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/yazi-picker.sh open"
-
+p = ["paste_clipboard_after", "collapse_selection"]
+P = ["paste_clipboard_before", "collapse_selection"]
+# Would be nice to add ya and yi, but the surround commands can't be chained
+Y = ["extend_to_line_end", "yank_main_selection_to_clipboard", "collapse_selection"]
 
 [keys.normal.space]
 i = ":toggle lsp.display-inlay-hints"
+
+[keys.insert]
+"C-space" = "completion"
+
+
