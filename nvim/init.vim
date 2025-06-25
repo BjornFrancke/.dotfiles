@@ -5,29 +5,38 @@
 " PlUGINS
 "
 call plug#begin()
- Plug 'dracula/vim'
+ Plug 'dracula/vim' " Color scheme
  Plug 'preservim/nerdcommenter' 
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
- Plug 'itchyny/lightline.vim'
- Plug 'itchyny/vim-gitbranch'
- Plug 'mhinz/vim-startify'
+ Plug 'itchyny/lightline.vim' " Status line
+ Plug 'itchyny/vim-gitbranch' " Used in status line for branch name
+ Plug 'mhinz/vim-startify' " Dashboard
  Plug 'kdheepak/lazygit.nvim'
- Plug 'preservim/nerdtree'
+ Plug 'preservim/nerdtree' " Filebrowser
  Plug 'lewis6991/gitsigns.nvim'
  Plug 'ryanoasis/vim-devicons'
  Plug 'nvim-lua/plenary.nvim'
+ Plug 'echasnovski/mini.indentscope'
+ Plug 'shortcuts/no-neck-pain.nvim', { 'tag': '*' } " Zen mode
  Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
+ Plug 'AndrewRadev/splitjoin.vim' " Not sure
 call plug#end()
 
 "
 " BASIC CONFIGURATION
 "
+noremap <space> :
+
+let mapleader = " "
+let g:mapleader = " "
+
 syntax on " syntax highlighting
 set number " display line numbers
 set incsearch " show incremental search results as you type
 set noswapfile " disable swap file
 inoremap jk <ESC> " remap escape to "jk"
 "set spell spelllang=en_us
+map <leader>o :setlocal spell! spelllang=en_us<CR>
 set wildmode=longest,list   " get bash-like tab completions
 set cc=80                  " set an 80 column border for good coding style
 filetype plugin indent on   " allow auto-indenting depending on file type
@@ -36,7 +45,6 @@ filetype plugin on
 set clipboard=unnamedplus   " using system clipboard
 set tabstop=4               " number of columns occupied by a tab 
 set shiftwidth=4            " width for auto indents
-
 "
 " KEYMAPS
 "
@@ -45,18 +53,28 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
-"
+
+" Insert an empty line *below* the current line without entering Insert mode
+" nnoremap <silent> <leader>o :<C-u>call append(line('.'), repeat([''], v:count1))<CR>
+" Insert an empty line *above* the current line without entering Insert mode
+"" nnoremap <silent> <leader>O :<C-u>call append(line('.')-1, repeat([''], v:count1))<CR>
+
+" Buffer -> back and forward
+nnoremap <TAB> :bn<CR>
+nnoremap <S-TAB> :bp<CR>
+
 " open file in a text by placing text and gf
 nnoremap gf :vert winc f<cr>
+
 " copies filepath to clipboard by pressing yf
 :nnoremap <silent> yf :let @+=expand('%:p')<CR>
+
 " copies pwd to clipboard: command yd
 :nnoremap <silent> yd :let @+=expand('%:p:h')<CR>
 
 " setup mapping to call :LazyGit
 nnoremap <silent> <leader>lg :LazyGit<CR>
 "
-let mapleader = " "
 "
 " NERDTree
 "
@@ -64,8 +82,10 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
-"
+
 let g:NERDTreeWinPos = 'right'
+let g:NERDTreeShowLineNumbers = 0 
+
 "
 " GitSigns
 "
@@ -150,3 +170,20 @@ let g:lightline = {
       \ },
       \ }
 
+let g:lightline.active.right = [ [ 'lineinfo', 'syntastic' ],
+      \                          [ 'percent' ],
+      \                          [ 'fileformat' ] ]
+
+let g:lightline.mode_map = {
+		\ 'n' : 'NOR',
+		\ 'i' : 'INS',
+		\ 'R' : 'REP',
+		\ 'v' : 'VIS',
+		\ 'V' : 'V-LIN',
+		\ "\<C-v>": 'V-BLK',
+		\ 'c' : 'COM',
+		\ 's' : 'SEL',
+		\ 'S' : 'S-LIN',
+		\ "\<C-s>": 'S-BLK',
+		\ 't': 'TERM',
+		\ }
