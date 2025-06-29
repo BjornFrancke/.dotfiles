@@ -6,6 +6,7 @@
 "
 call plug#begin()
  Plug 'dracula/vim' " Color scheme
+ Plug 'Luxed/ayu-vim' 
  Plug 'preservim/nerdcommenter' 
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
  Plug 'itchyny/lightline.vim' " Status line
@@ -30,6 +31,11 @@ noremap <space> :
 let mapleader = " "
 let g:mapleader = " "
 
+set background=dark  
+let g:ayucolor="dark"   " for dark version of theme
+colorscheme ayu
+let g:ayu_italic_comment = 1 " defaults to 0.
+let g:ayu_extended_palette = 1
 syntax on " syntax highlighting
 set number " display line numbers
 set incsearch " show incremental search results as you type
@@ -159,7 +165,7 @@ set noshowmode
 " Lightline
 "
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'ayu',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'cocstatus', 'gitbranch', 'readonly', 'filename', 'modified' ] ],
