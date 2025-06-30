@@ -60,16 +60,11 @@
   "git.openRepositoryInParentFolders": "always",
   "cursor.general.gitGraphIndexing": "enabled",
   "cursor.cmdk.autoSelect": false,
-  "codestream.serverUrl": "https://codestream-api-v2-us1.service.newrelic.com",
-  "codestream.email": "ba@tribehappiness.com",
   "workbench.tree.renderIndentGuides": "always",
   "editor.formatOnSave": true,
   "cursor.general.enableShadowWorkspace": true,
   "cursor.composer.shouldAllowCustomModes": true,
-  "[dockerfile]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-  },
-  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.ignoreTrimWhitespace": false,
   "cursor.cpp.disabledLanguages": ["markdown"],
   "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.unicodeHighlight.ambiguousCharacters": false,
@@ -150,6 +145,7 @@
   "workbench.editor.tabActionCloseVisibility": false,
   "workbench.tips.enabled": false,
   "workbench.activityBar.location": "hidden",
+  "workbench.editor.closeOnFileDelete": true,
   "workbench.panel.showLabels": false,
   "errorLens.gutterIconSet": "circle"
 }
