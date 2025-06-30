@@ -40,7 +40,6 @@ syntax on " syntax highlighting
 set number " display line numbers
 set incsearch " show incremental search results as you type
 set noswapfile " disable swap file
-inoremap jk <ESC> " remap escape to "jk"
 "set spell spelllang=en_us
 map <leader>o :setlocal spell! spelllang=en_us<CR>
 set wildmode=longest,list   " get bash-like tab completions
@@ -54,11 +53,13 @@ set shiftwidth=4            " width for auto indents
 "
 " KEYMAPS
 "
+" Remap escape to "jk" 
+inoremap jk <ESC>
 " move line or visually selected block - alt+j/k
 inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " Insert an empty line *below* the current line without entering Insert mode
 " nnoremap <silent> <leader>o :<C-u>call append(line('.'), repeat([''], v:count1))<CR>
@@ -116,11 +117,10 @@ inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
-nmap <silent><nowait> gd <Plug>(coc-definition)
+nmap <silent><nowait> cd <Plug>(coc-definition)
 nmap <silent><nowait> gy <Plug>(coc-type-definition)
 nmap <silent><nowait> gi <Plug>(coc-implementation)
-nmap <silent><nowait> gr <Plug>(coc-references)
-
+nmap <silent><nowait> cr <Plug>(coc-references)
 
 " Symbol renaming
 nmap <leader>rn <Plug>(coc-rename)
@@ -130,11 +130,20 @@ nmap <silent> <leader>re <Plug>(coc-codeaction-refactor)
 xmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
 nmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
 
+" Formatting selected code
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
 " Run the Code Lens action on the current line
 nmap <leader>cl  <Plug>(coc-codelens-action)
 
+" Ripgrep powered search respecting .gitignore 
+nnoremap <leader>fs :Rg<CR>
 " Remap keys for applying code actions at the cursor position
 nmap <leader>ac  <Plug>(coc-codeaction-cursor)
+
+" Add `:Format` command to format current buffer
+command! -nargs=0 Format :call CocActionAsync('format')
 
 " Applying code actions to the selected code block
 " Example: `<leader>aap` for current paragraph
