@@ -206,14 +206,6 @@ set encoding=utf-8
 "let g:airline_symbols.maxlinenr = ''
 "let g:airline_symbols.dirty='⚡'
 
-"let g:airline_section_z = '' 
-
-"let g:airline_theme='powerlineish'
-"let g:airline_exstensions = ['branch']
-
-
-" Auto populate powerline icons
-" let g:airline_powerline_fonts = 1
 
 " Return to last edit position when opening files (You want this!)
 "au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -269,45 +261,3 @@ hi User1 ctermfg=14 ctermbg=0 guifg=#93a1a1 guibg=#073642
 "set statusline=
 "set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 "set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-" Lightline
-"
-"let g:lightline = {
-      "\ 'colorscheme': 'ayu',
-      "\ 'active': {
-      "\   'left': [ [ 'mode', 'paste' ],
-      "\             [ 'cocstatus', 'gitbranch', 'readonly', 'filename', 'modified' ] ],
-      "\ },
-      "\ 'tabline': {
-	  "\   'left': [ [ 'buffers' ] ],
-      "\   'right': [ [ 'close' ] ]
-	  "\ },
-      "\ 'component_expand': {
-	  "\   'buffers': 'lightline#bufferline#buffers'
-	  "\ },
-      "\ 'component_type': {
-	  "\ 'buffers': 'tabsel'
-	  "\ },
-      "\ 'component_function': {
-      "\   'gitbranch': 'gitbranch#name',
-      "\   'cocstatus': 'coc#status'
-      "\ },
-      "\ }
-
-
-"let g:lightline.active.right = [ [ 'lineinfo', 'syntastic' ],
-      "\                          [ 'percent' ],
-      "\                          [ 'fileformat' ] ]
-
-"let g:lightline.mode_map = {
-		"\ 'n' : 'NOR',
-		"\ 'i' : 'INS',
-		"\ 'R' : 'REP',
-		"\ 'v' : 'VIS',
-		"\ 'V' : 'V-LIN',
-		"\ "\<C-v>": 'V-BLK',
-		"\ 'c' : 'COM',
-		"\ 's' : 'SEL',
-		"\ 'S' : 'S-LIN',
-		"\ "\<C-s>": 'S-BLK',
-		"\ 't': 'TERM',
-		"\ }
