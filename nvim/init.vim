@@ -1,21 +1,24 @@
+"────────────────────────────────────────────────────────────────
+"
 " (Neo)Vim Configuration
 " By Bjorn Francke
 " June 2025
 "
-" PlUGINS
+"────────────────────────────────────────────────────────────────
 "
+"                        PlUGINS
+"
+"────────────────────────────────────────────────────────────────
 call plug#begin()
  Plug 'Luxed/ayu-vim' 
  Plug 'preservim/nerdcommenter' 
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
- "Plug 'itchyny/lightline.vim' " Status line
  Plug 'itchyny/vim-gitbranch' " Used in status line for branch name
  Plug 'mhinz/vim-startify' " Dashboard
  Plug 'kdheepak/lazygit.nvim' " Git TUI
  Plug 'preservim/nerdtree' " Filebrowser
  Plug 'lewis6991/gitsigns.nvim' " Git gutter status
  Plug 'ryanoasis/vim-devicons'
- "Plug 'vim-airline/vim-airline' " Statusline
  Plug 'nvim-tree/nvim-web-devicons' " Recommended (for coloured icons)
  Plug 'tpope/vim-fugitive'
  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -26,33 +29,35 @@ call plug#begin()
  Plug 'shortcuts/no-neck-pain.nvim', { 'tag': '*' } " Zen mode
  Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
  Plug 'AndrewRadev/splitjoin.vim' " Not sure
- "Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 lua << EOF
 require("bufferline").setup{}
 EOF
+"────────────────────────────────────────────────────────────────
 "
-" BASIC CONFIGURATION
+"                   BASIC CONFIGURATION
 "
+"────────────────────────────────────────────────────────────────
 noremap <space> :
 
 let mapleader = " "
 let g:mapleader = " "
 
 set background=dark  
-let g:ayucolor="dark"   " for dark version of theme
+let g:ayucolor="dark"        " for dark version of theme
 colorscheme ayu
 let g:ayu_italic_comment = 1 " defaults to 0.
 let g:ayu_extended_palette = 1
-syntax on " syntax highlighting
-set number " display line numbers
-set incsearch " show incremental search results as you type
-set noswapfile " disable swap file
+syntax on                   " syntax highlighting
+set number                  " display line numbers
+set incsearch               " show incremental search results as you type
+set noswapfile              " disable swap file
 "set spell spelllang=en_us
 map <leader>o :setlocal spell! spelllang=en_us<CR>
+set wildmode
 set wildmode=longest,list   " get bash-like tab completions
-set cc=80                  " set an 80 column border for good coding style
+set cc=80                   " set an 80 column border for good coding style
 filetype plugin indent on   " allow auto-indenting depending on file type
 set cursorline              " highlight current cursor line
 filetype plugin on
@@ -64,9 +69,11 @@ set shiftwidth=4            " width for auto indents
 " Show matching brackets when text indicator is over them
 set showmatch
 
+"─────────────────────────────────────────────────────────────
 "
-" KEYMAPS
+"                       KEYMAPS
 "
+"─────────────────────────────────────────────────────────────
 " Remap escape to "jk" 
 inoremap jk <ESC>
 
@@ -107,6 +114,7 @@ nnoremap <C-f> :NERDTreeFind<CR>
 
 let g:NERDTreeWinPos = 'right'
 let g:NERDTreeShowLineNumbers = 0 
+let g:NERDTreeMinimalUI=1
 "
 " GitSigns
 "
@@ -186,28 +194,8 @@ endif
 set encoding=utf-8
 "set termguicolors
 
-"
-" Airline (bufferline)
-"
 
-" Disable tabline to be compatable with bufferline plugins
-"let g:airline#extensions#tabline#enabled = 0
-
-"" To prevent error, if symbol isn't used
-"if !exists('g:airline_symbols')
-  "let g:airline_symbols = {}
-"endif
-
-"let g:airline_left_sep = ''
-"let g:airline_left_alt_sep = ''
-"let g:airline_right_sep = ''
-"let g:airline_right_alt_sep = ''
-"let g:airline_symbols.branch = ''
-"let g:airline_symbols.readonly = ''
-"let g:airline_symbols.linenr = '☰'
-"let g:airline_symbols.maxlinenr = ''
-"let g:airline_symbols.dirty='⚡'
-
+"─────────────────────────────────────────────────────────
 
 " Return to last edit position when opening files (You want this!)
 "au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -216,7 +204,16 @@ set encoding=utf-8
 "set noshowmode
 "set guioptions-=e
 "
-" Put this near the top of your vimrc
+"
+"────────────────────────────────────────────────────
+"
+"                   Statusline
+"
+"────────────────────────────────────────────────────
+
+set laststatus=2
+
+" Shorten file path to fit screen
 function! ShortPath(max)
   " Expand   %:~:.   → home-relative (~/) and CWD-relative (./) path
   let l:path = expand('%:~:.')
@@ -229,7 +226,6 @@ function! ShortPath(max)
   return pathshorten(l:path)
 endfunction
 
-set laststatus=2
 
 set statusline=
 set statusline+=%(%{&buflisted?bufnr('%'):''}\ \ %)
@@ -248,36 +244,19 @@ set statusline+=\ %* " Restore normal highlight
 set statusline+=\ %{&number?'':printf('%2d,',line('.'))} " Line number
 set statusline+=%-2v " Virtual column number
 set statusline+=\ %2p%% " Percentage through file in lines as in |CTRL-G
-"set laststatus=2
-" ────────────────────────────────────────────────────────────────
-" Custom power-line-style status-line
-"   • global:   set laststatus=3   (Neovim ≥0.9)
-"   • per-win:  set laststatus=2   (classic Vim / NVim)
-" ────────────────────────────────────────────────────────────────
-" ──────────────── Highlight groups (Solarized-light example) ───────────────
+"
 " Logic for customizing the User1 highlight group is the following
 " - if StatusLine colors are reverse, then User1 is not reverse and User1 fg = StatusLine fg
 hi StatusLine cterm=reverse gui=reverse ctermfg=14 ctermbg=8 guifg=#93a1a1 guibg=#002732
 hi StatusLineNC cterm=reverse gui=reverse ctermfg=11 ctermbg=0 guifg=#657b83 guibg=#073642
 hi User1 ctermfg=14 ctermbg=0 guifg=#93a1a1 guibg=#073642
-"set statusline=
-"set statusline+=%(%{&buflisted?bufnr('%'):''}\ \ %)
-"set statusline+=%< " Truncate line here
-"set statusline+=%f\  " File path, as typed or relative to current directory
-"set statusline+=%{&modified?'+\ ':''}
-"
-"set statusline+=%{&readonly?'\ ':''}
-"set statusline+=%= " Separation point between left and right aligned items
-"set statusline+=\ %{&filetype!=#''?&filetype:'none'}
-"set statusline+=%(\ %{(&bomb\|\|&fileencoding!~#'^$\\\|utf-8'?'\ '.&fileencoding.(&bomb?'-bom':''):'')
-  "\.(&fileformat!=#(has('win32')?'dos':'unix')?'\ '.&fileformat:'')}%)
-"set statusline+=%(\ \ %{&modifiable?(&expandtab?'et\ ':'noet\ ').&shiftwidth:''}%)
-"set statusline+=\ 
-"set statusline+=\ %{&number?'':printf('%2d,',line('.'))} " Line number
-"set statusline+=%-2v " Virtual column number
-"set statusline+=\ %2p%% " Percentage through file in lines as in |CTRL-G|
 
+"───────────────────────────────────────────────────
 
-"set statusline=
-"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
-"set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+" If Vim version is equal to or greater than 7.3 enable undofile.
+" This allows you to undo changes to a file even after saving it.
+if version >= 703
+    set undodir=~/.vim/backup
+    set undofile
+    set undoreload=10000
+endif
