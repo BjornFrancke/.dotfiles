@@ -29,7 +29,9 @@ call plug#begin()
  "Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
-
+lua << EOF
+require("bufferline").setup{}
+EOF
 "
 " BASIC CONFIGURATION
 "
@@ -213,33 +215,51 @@ set encoding=utf-8
 "set showtabline=2
 "set noshowmode
 "set guioptions-=e
+"
+" Put this near the top of your vimrc
+function! ShortPath(max)
+  " Expand   %:~:.   → home-relative (~/) and CWD-relative (./) path
+  let l:path = expand('%:~:.')
+  " If it's already short enough, keep it
+  if strlen(l:path) <= a:max
+    return l:path
+  endif
+  " pathshorten() turns /very/long/path/to/file.txt
+  " into          /v/l/p/t/file.txt
+  return pathshorten(l:path)
+endfunction
 
-"set laststatus=2
+set laststatus=2
 
 set statusline=
 set statusline+=%(%{&buflisted?bufnr('%'):''}\ \ %)
 set statusline+=%< " Truncate line here
-set statusline+=%f\  " File path, as typed or relative to current directory
+"set statusline+=%f\  " File path, as typed or relative to current directory
+set statusline+=%{ShortPath(40)}\          " ← show ≤40-char path, else shortened
 set statusline+=%{&modified?'+\ ':''}
 set statusline+=%{&readonly?'\ ':''}
 set statusline+=%1*\  " Set highlight group to User1
 set statusline+=%{gitbranch#name()}
 set statusline+=%= " Separation point between left and right aligned items
 set statusline+=\ %{&filetype!=#''?&filetype:'none'}
-set statusline+=%(\ %{(&bomb\|\|&fileencoding!~#'^$\\\|utf-8'?'\ '.&fileencoding.(&bomb?'-bom':''):'')
-  \.(&fileformat!=#(has('win32')?'dos':'unix')?'\ '.&fileformat:'')}%)
-set statusline+=%(\ \ %{&modifiable?(&expandtab?'et\ ':'noet\ ').&shiftwidth:''}%)
+set statusline+=\ \ 
+set statusline+=%{strftime(\"%H:%M\")}
 set statusline+=\ %* " Restore normal highlight
 set statusline+=\ %{&number?'':printf('%2d,',line('.'))} " Line number
 set statusline+=%-2v " Virtual column number
 set statusline+=\ %2p%% " Percentage through file in lines as in |CTRL-G
-
+"set laststatus=2
+" ────────────────────────────────────────────────────────────────
+" Custom power-line-style status-line
+"   • global:   set laststatus=3   (Neovim ≥0.9)
+"   • per-win:  set laststatus=2   (classic Vim / NVim)
+" ────────────────────────────────────────────────────────────────
+" ──────────────── Highlight groups (Solarized-light example) ───────────────
 " Logic for customizing the User1 highlight group is the following
 " - if StatusLine colors are reverse, then User1 is not reverse and User1 fg = StatusLine fg
 hi StatusLine cterm=reverse gui=reverse ctermfg=14 ctermbg=8 guifg=#93a1a1 guibg=#002732
 hi StatusLineNC cterm=reverse gui=reverse ctermfg=11 ctermbg=0 guifg=#657b83 guibg=#073642
 hi User1 ctermfg=14 ctermbg=0 guifg=#93a1a1 guibg=#073642
-
 "set statusline=
 "set statusline+=%(%{&buflisted?bufnr('%'):''}\ \ %)
 "set statusline+=%< " Truncate line here
