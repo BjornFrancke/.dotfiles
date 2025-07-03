@@ -17,6 +17,9 @@ font-size = 17
 font-feature = liga
 font-thicken = true
 
+# Adjust underline for nvim indent
+adjust-underline-thickness = 4
+
 # Cursor
 cursor-style = block
 
