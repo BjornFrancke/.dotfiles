@@ -46,7 +46,6 @@ return {
 
         keyset("n", "K", '<CMD>lua _G.show_docs()<CR>', { silent = true })
 
-
         -- Apply codeAction to the selected region
         -- Example: `<leader>aap` for current paragraph
         local opts = { silent = true, nowait = true }
@@ -59,5 +58,11 @@ return {
         keyset("n", "<leader>as", "<Plug>(coc-codeaction-source)", opts)
         -- Apply the most preferred quickfix action on the current line.
         keyset("n", "<leader>qf", "<Plug>(coc-fix-current)", opts)
+
+
+        -- Use CTRL-S for selections ranges
+        -- Requires 'textDocument/selectionRange' support of language server
+        keyset("n", "<C-s>", "<Plug>(coc-range-select)", { silent = true })
+        keyset("x", "<C-s>", "<Plug>(coc-range-select)", { silent = true })
     end,
 }
