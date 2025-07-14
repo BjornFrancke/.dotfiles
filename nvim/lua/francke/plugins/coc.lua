@@ -19,6 +19,8 @@ return {
             'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
         keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 
+        keyset("n", "<leader>rn", "<Plug>(coc-rename)", { silent = true })
+
         -- Use <c-space> to trigger completion
         keyset("i", "<c-space>", "coc#refresh()", { silent = true, expr = true })
 
