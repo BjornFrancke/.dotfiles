@@ -3,16 +3,6 @@ return {
     main = "ibl",
     ---@module "ibl"
     ---@type ibl.config
-    opts = {
-        -- symbol = "▏",
-        symbol = "│",
-        options = { try_as_border = true },
-        scope = {
-            show_start = true,
-            show_exact_scope = true,
-            show_end = true
-        }
-    },
     config = function()
         local highlight = {
             "RainbowCyan",
@@ -37,7 +27,30 @@ return {
             vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
         end)
 
-        require("ibl").setup { scope = { highlight = highlight } }
+        require("ibl").setup {
+            -- symbol = "▏",
+            indent = {
+                char = "│",
+            },
+            scope = {
+                show_start = true,
+                show_exact_scope = true,
+                show_end = true,
+                highlight = highlight
+            },
+            exclude = {
+                filetypes = {
+                    "dashboard",
+                    "help",
+                    "startify",
+                    "alpha",
+                    "neo-tree",
+                    "Trouble",
+                    "lazy",
+                    "mason",
+                },
+            },
+        }
     end,
 
 
