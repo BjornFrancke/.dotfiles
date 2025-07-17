@@ -61,7 +61,10 @@ return {
         -- Apply the most preferred quickfix action on the current line.
         keyset("n", "<leader>qf", "<Plug>(coc-fix-current)", opts)
 
-
+        -- Remap keys for apply refactor code actions.
+        keyset("n", "<leader>re", "<Plug>(coc-codeaction-refactor)", { silent = true })
+        keyset("x", "<leader>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
+        keyset("n", "<leader>r", "<Plug>(coc-codeaction-refactor-selected)", { silent = true })
         -- Use CTRL-S for selections ranges
         -- Requires 'textDocument/selectionRange' support of language server
         keyset("n", "<C-s>", "<Plug>(coc-range-select)", { silent = true })
