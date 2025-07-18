@@ -18,6 +18,8 @@ alias myip='curl http://ipecho.net/plain; echo' # Get public ip
 alias ports='lsof -nP -iTCP -sTCP:LISTEN'  # see open TCP ports
 
 
+alias vim='nvim'
+alias e='$EDITOR'
 ##### Zellij #####
 alias ze='zellij -l welcome'
 alias yaze='zellij -l welcome --config-dir ~/.config/yazelix/zellij options --layout-dir ~/.config/yazelix/zellij/layout'

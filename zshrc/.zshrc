@@ -30,6 +30,21 @@ ZSH_THEME="robbyrussell"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
+echo "
+
+
+ _____  ____    ____  ____     __  __  _    ___ 
+|     ||    \  /    T|    \   /  ]|  l/ ]  /  _]
+|   __j|  D  )Y  o  ||  _  Y /  / |  ' /  /  [_ 
+|  l_  |    / |     ||  |  |/  /  |    \ Y    _]
+|   _] |    \ |  _  ||  |  /   \_ |     Y|   [_ 
+|  T   |  .  Y|  |  ||  |  \     ||  .  ||     T
+l__j   l__j\_jl__j__jl__j__j\____jl__j\_jl_____j
+                                                
+
+
+"
+
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
@@ -95,6 +110,10 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='nvim'
 # fi
 
+export EDITOR='nvim'
+export VISUAL='nvim'
+
+
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
 
@@ -109,6 +128,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
 
 # Aliases
 source ~/dotfiles/zshrc/aliases.zsh
@@ -155,6 +176,9 @@ if [ -f '/Users/bjorn/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bjorn/goo
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/bjorn/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bjorn/google-cloud-sdk/completion.zsh.inc'; fi
 alias lzd='lazydocker'
+
+# Go
+export PATH="$HOME/Go/bin:$PATH"
 
 
 # Herd injected PHP 8.2 configuration.
