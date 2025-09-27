@@ -31,6 +31,11 @@ alias dcom='docker-compose'
 alias dps='docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
 alias dreload='docker compose up -d --build --no-deps' # Builds and swap image -> append with service-name
 
+##### Drizzle kit ####
+alias dkgen='bun drizzle-kit generate'
+alias dkpush='bun drizzle-kit push'
+
+
 ##### macOS niceties #####
 alias emptytrash='rm -rf ~/.Trash/*' # purge macOS Trash
 
