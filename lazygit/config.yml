@@ -1,6 +1,6 @@
 os:
-  editPreset: "hx"
-
+  edit: 'nvim {{filename}}'
+  editInTerminal: true
 gui:
   nerdFontsVersion: "3"
   sidePanelWidth: 0.3333
