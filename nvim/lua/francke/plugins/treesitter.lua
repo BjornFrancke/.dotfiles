@@ -23,6 +23,8 @@ return {
                     "markdown_inline",
                     "regex",
                     "diff",
+                    "gitcommit",
+                    "dockerfile",
                 },
                 highlight = {
                     enable = true,
