@@ -8,9 +8,13 @@
   },
   "editor.fontFamily": "JetBrainsMonoNerdFontMono-Medium",
   "editor.fontWeight": "normal",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit",
+    "source.fixAll.biome": "explicit"
+  },
   "prettier.bracketSameLine": true,
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "git.confirmSync": false,
   "git.suggestSmartCommit": false,
@@ -52,15 +56,10 @@
     "*.html": "default"
   },
   "editor.scrollbar.horizontal": "hidden",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "cursor.aipreview.enabled": true,
-  "cloudcode.project": "tribe-api-v2",
-  "geminicodeassist.project": "",
-  "cloudcode.duetAI.project": "",
+  "editor.defaultFormatter": "biomejs.biome",
   "git.openRepositoryInParentFolders": "always",
   "cursor.general.gitGraphIndexing": "enabled",
   "cursor.cmdk.autoSelect": false,
-  "workbench.tree.renderIndentGuides": "always",
   "editor.formatOnSave": true,
   "cursor.general.enableShadowWorkspace": true,
   "cursor.composer.shouldAllowCustomModes": true,
@@ -133,6 +132,10 @@
   "editor.inlayHints.maximumLength": 40,
   "editor.showFoldingControls": "never",
   "workbench.productIconTheme": "icons-carbon",
+  "extensions.ignoreRecommendations": true,
+  "editor.guides.highlightActiveIndentation": false,
+  "editor.guides.indentation": false,
+  "workbench.navigationControl.enabled": false,
   "bracket-pair-colorizer-2.highlightActiveScope": true,
   "workbench.activityBar.orientation": "vertical",
   "indentRainbow.indicatorStyle": "light",
@@ -147,5 +150,15 @@
   "workbench.activityBar.location": "hidden",
   "workbench.editor.closeOnFileDelete": true,
   "workbench.panel.showLabels": false,
-  "errorLens.gutterIconSet": "circle"
+  "errorLens.gutterIconSet": "circle",
+  "cSpell.language": "en,da",
+  "biome.requireConfiguration": true,
+  "cSpell.enabledFileTypes": {
+    "yaml": false,
+    "yml": false,
+    "json": false
+  },
+  "workbench.tree.renderIndentGuides": "always",
+  "window.density.editorTabHeight": "compact",
+
 }
