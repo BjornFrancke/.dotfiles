@@ -106,6 +106,14 @@ return {
 			{ "]x", desc = "Next trouble item" },
 			{ "[x", desc = "Previous trouble item" },
 
+			-- File Explorer (nvim-tree)
+			{ "<leader>e", group = "Explorer" },
+			{ "<leader>e", desc = "Toggle file explorer" },
+			{ "<leader>ef", desc = "Focus file explorer" },
+			{ "<leader>ec", desc = "Find current file in explorer" },
+			{ "<leader>eC", desc = "Collapse file explorer" },
+			{ "<D-b>", desc = "Toggle file explorer (Cmd+b)" },
+
 			-- Harpoon
 			{ "<leader>1", desc = "Harpoon file 1" },
 			{ "<leader>2", desc = "Harpoon file 2" },

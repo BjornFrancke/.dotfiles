@@ -14,8 +14,9 @@
 -- Key concepts for vim immersion:
 -- - Leader key is SPACE (<leader>)
 -- - Most commands start with <leader> (press space, then which-key shows options)
+-- - Use 'Cmd+b' to toggle sidebar file explorer (nvim-tree, just like VSCode!)
 -- - Use 's' for Flash jumps (quick navigation)
--- - Use '-' to open file explorer (Oil.nvim)
+-- - Use '-' to open parent directory (Oil.nvim for filesystem editing)
 -- - Use '<leader>f*' for finding files/code (Telescope)
 -- - Use '<leader>x*' for diagnostics (Trouble)
 -- ========================================

@@ -6,8 +6,10 @@
 -- Quick reference:
 -- BASIC:
 --   jk (insert mode)    : Exit to normal mode
+--   Cmd+b               : Toggle sidebar file explorer (nvim-tree)
+--   <leader>e           : Toggle sidebar (alternative to Cmd+b)
+--   -                   : Open parent directory (Oil)
 --   <leader>pv          : Open file explorer (Oil)
---   -                   : Open parent directory
 --
 -- FINDING (Telescope):
 --   <leader>ff          : Find files

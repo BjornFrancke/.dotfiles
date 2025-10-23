@@ -9,8 +9,69 @@
 |-----|--------|-------|
 | `jk` | Exit insert mode | From insert mode |
 | `SPACE` | Show command menu | Wait for which-key popup |
-| `-` | Open parent directory | Oil.nvim file explorer |
-| `<leader>pv` | File explorer | Same as `-` |
+| `Cmd+b` | Toggle sidebar | nvim-tree file explorer (VSCode-style) |
+| `<leader>e` | Toggle sidebar | Alternative to Cmd+b |
+| `-` | Open parent directory | Oil.nvim (edit filesystem like buffer) |
+
+## 📁 File Explorers
+
+You have **two file explorers** - pick the one that fits your workflow:
+
+### nvim-tree (VSCode-style Sidebar)
+Persistent sidebar on the right, great for browsing project structure.
+
+| Key | Action |
+|-----|--------|
+| `Cmd+b` | Toggle sidebar (like VSCode) |
+| `<leader>e` | Toggle sidebar (alternative) |
+| `<leader>ef` | Focus sidebar |
+| `<leader>ec` | Find current file in sidebar |
+| `<leader>eC` | Collapse all folders |
+
+**Inside nvim-tree:**
+- `Enter` - Open file/folder
+- `o` - Open file/folder
+- `a` - Create new file/folder
+- `d` - Delete file/folder (sends to trash)
+- `r` - Rename file/folder
+- `x` - Cut file/folder
+- `c` - Copy file/folder
+- `p` - Paste file/folder
+- `y` - Copy filename
+- `Y` - Copy relative path
+- `gy` - Copy absolute path
+- `R` - Refresh tree
+- `H` - Toggle hidden files
+- `I` - Toggle git ignored files
+- `q` - Close tree
+- `W` - Collapse all folders
+- `E` - Expand all folders
+- `s` - Open file in vertical split
+- `i` - Open file in horizontal split
+- `t` - Open file in new tab
+
+### Oil.nvim (Vim-native Filesystem Editor)
+Edit your filesystem like a text buffer - very powerful!
+
+| Key | Action |
+|-----|--------|
+| `-` | Open parent directory |
+| `<leader>pv` | Open file explorer |
+| `<leader>-` | Open parent (floating window) |
+
+**Inside Oil:**
+- Edit filenames directly like text
+- `<CR>` - Open file/directory
+- `-` - Go up to parent directory
+- `g.` - Toggle hidden files
+- `<C-p>` - Preview file
+- Save buffer (`:w`) to apply changes (renames, deletes, etc.)
+- Delete lines to delete files (on save)
+- Create new lines and type names to create files
+
+**Which to use?**
+- Use **nvim-tree** for browsing and quick navigation (more familiar from VSCode)
+- Use **Oil** for bulk operations like renaming multiple files (more powerful)
 
 ## 🔍 Finding Files & Code (Telescope)
 
@@ -202,27 +263,32 @@ Automatically closes brackets, quotes, etc. (via mini.pairs)
 
 ## 💡 Learning Tips
 
-1. **Start with the essentials**: Learn `-`, `<leader>ff`, `<leader>fg`, `gcc`, and `gd` first
+1. **Start with the essentials**: Learn `Cmd+b`, `<leader>ff`, `<leader>fg`, `gcc`, and `gd` first
 2. **Use which-key**: Press `SPACE` and wait - it shows you everything!
-3. **Practice Flash**: Use `s` instead of `/` for quick navigation
-4. **Master splits**: `<leader>sv` + `Ctrl+h/j/k/l` for navigation
-5. **Learn surround**: `gsaiw"` (surround word with quotes) is powerful
-6. **Use Harpoon**: Mark your most-used files with `Ctrl+i`, access with `<leader>1-4`
+3. **Use nvim-tree**: `Cmd+b` for a familiar sidebar experience (just like VSCode!)
+4. **Practice Flash**: Use `s` instead of `/` for quick navigation
+5. **Master splits**: `<leader>sv` + `Ctrl+h/j/k/l` for navigation
+6. **Learn surround**: `gsaiw"` (surround word with quotes) is powerful
+7. **Use Harpoon**: Mark your most-used files with `Ctrl+i`, access with `<leader>1-4`
 
 ## 🔄 Coming from VSCode?
 
-| VSCode | Neovim Equivalent |
-|--------|-------------------|
-| `Cmd+P` | `<leader>ff` (find files) |
-| `Cmd+Shift+F` | `<leader>fg` (live grep) |
-| `Cmd+Shift+P` | `SPACE` (which-key menu) |
-| `Cmd+B` | `-` (file explorer) |
-| `Cmd+/` | `gcc` (toggle comment) |
-| `F12` | `gd` (go to definition) |
-| `Shift+F12` | `gr` (go to references) |
-| `Cmd+Tab` | `Shift+h/l` (buffer navigation) |
-| `Cmd+W` | `<leader>bd` (close buffer) |
-| `Ctrl+\`` | Built into splits workflow |
+| VSCode | Neovim Equivalent | Notes |
+|--------|-------------------|-------|
+| `Cmd+B` | `Cmd+b` | Toggle sidebar (works exactly the same!) |
+| `Cmd+P` | `<leader>ff` | Find files |
+| `Cmd+Shift+F` | `<leader>fg` | Search in all files |
+| `Cmd+Shift+P` | `SPACE` | Command palette (wait for which-key) |
+| `Cmd+/` | `gcc` | Toggle line comment |
+| `F12` | `gd` | Go to definition |
+| `Shift+F12` | `gr` | Find all references |
+| `Cmd+Tab` | `Shift+h/l` | Switch between files |
+| `Cmd+W` | `<leader>bd` | Close current file |
+| `Ctrl+\`` | `<leader>sv` | Create vertical split |
+| **File Explorer** | | |
+| Click files in sidebar | Same in nvim-tree! | Use `Cmd+b` to open |
+| Rename in sidebar | `r` in nvim-tree | Much faster! |
+| Delete in sidebar | `d` in nvim-tree | Sends to trash |
 
 ## 📚 Further Reading
 
