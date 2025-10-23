@@ -1,24 +1,39 @@
-vim.opt.guicursor = ""
+-- ========================================
+-- CORE VIM SETTINGS
+-- ========================================
 
-vim.opt.number = true
-vim.opt.nu = true
-vim.opt.relativenumber = true
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+-- Cursor and appearance
+vim.opt.guicursor = ""              -- Use block cursor in all modes
+vim.opt.number = true                -- Show line numbers
+vim.opt.nu = true                    -- Show line numbers (alias)
+vim.opt.relativenumber = true        -- Show relative line numbers (great for motions like 5j)
+vim.opt.cursorline = true           -- Highlight current line
 
-vim.opt.smartindent = true
-vim.opt.cursorline = true
+-- Indentation and tabs
+vim.opt.tabstop = 4                 -- Tab width is 4 spaces
+vim.opt.softtabstop = 4             -- Number of spaces for tab in insert mode
+vim.opt.shiftwidth = 4              -- Number of spaces for auto-indent
+vim.opt.expandtab = true            -- Convert tabs to spaces
+vim.opt.smartindent = true          -- Smart auto-indenting on new lines
 
-vim.opt.scrolloff = 8
+-- Scrolling and viewport
+vim.opt.scrolloff = 8               -- Keep 8 lines visible above/below cursor
 
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
+-- Search settings
+vim.opt.hlsearch = false            -- Don't highlight search results after search
+vim.opt.incsearch = true            -- Show search matches as you type
 
-vim.opt.termguicolors = true
+-- Colors
+vim.opt.termguicolors = true        -- Enable 24-bit RGB color in the terminal
 
-vim.opt.undodir = "~/.vim/undodir"
+-- Persistent undo (undo changes even after closing and reopening file)
+vim.opt.undofile = true
+vim.opt.undodir = vim.fn.stdpath("data") .. "/undodir"
+-- Create undodir if it doesn't exist
+local undodir = vim.fn.stdpath("data") .. "/undodir"
+if vim.fn.isdirectory(undodir) == 0 then
+	vim.fn.mkdir(undodir, "p")
+end
 
 vim.opt.clipboard = 'unnamedplus'   -- use system clipboard
 

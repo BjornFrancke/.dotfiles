@@ -1,9 +1,54 @@
+-- ========================================
+-- CUSTOM KEYBINDINGS
+-- ========================================
+-- Leader key is SPACE. Press SPACE and wait to see which-key popup with all options.
+--
+-- Quick reference:
+-- BASIC:
+--   jk (insert mode)    : Exit to normal mode
+--   <leader>pv          : Open file explorer (Oil)
+--   -                   : Open parent directory
+--
+-- FINDING (Telescope):
+--   <leader>ff          : Find files
+--   <leader>fg          : Live grep (search in files)
+--   <leader>fb          : Find buffers
+--   <leader>fo          : Recent files
+--   <leader>/           : Search current buffer
+--
+-- BUFFERS:
+--   Shift+h / Shift+l   : Previous/next buffer
+--   <leader>bd          : Delete buffer
+--   <leader>bo          : Close all other buffers
+--
+-- SPLITS:
+--   <leader>sv/sh       : Create vertical/horizontal split
+--   Ctrl+h/j/k/l        : Navigate between splits
+--   <leader>sx          : Close current split
+--
+-- CODE:
+--   gcc                 : Toggle line comment
+--   gd                  : Go to definition
+--   gr                  : Go to references
+--   K                   : Show documentation
+--   <leader>rn          : Rename symbol
+--
+-- DIAGNOSTICS:
+--   <leader>xx          : Toggle diagnostics (Trouble)
+--   ]x / [x             : Next/previous diagnostic
+--
+-- MOTIONS:
+--   s                   : Flash jump (type chars to jump anywhere)
+--   S                   : Flash treesitter (jump to code structures)
+-- ========================================
+
 local set = vim.opt
 
 local defaults = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
 
+-- Quick escape from insert mode
 vim.keymap.set("i", "jk", "<ESC>")
 
 -- To filebrowser
@@ -76,3 +121,41 @@ vim.keymap.set("n", "<leader>ss", "<cmd>vsplit<CR>", { desc = "Split current buf
 
 -- Focus on current split (alternative to maximize)
 vim.keymap.set("n", "<leader>so", "<cmd>only<CR>", { desc = "Close all other splits (focus current)" })
+
+-- ========================================
+-- BUFFER MANAGEMENT
+-- ========================================
+
+-- Navigate buffers (vim-native approach, no UI chrome)
+vim.keymap.set("n", "<S-l>", ":bnext<CR>", { desc = "Next buffer" })
+vim.keymap.set("n", "<S-h>", ":bprevious<CR>", { desc = "Previous buffer" })
+vim.keymap.set("n", "]b", ":bnext<CR>", { desc = "Next buffer" })
+vim.keymap.set("n", "[b", ":bprevious<CR>", { desc = "Previous buffer" })
+
+-- Close buffers
+vim.keymap.set("n", "<leader>bd", ":bdelete<CR>", { desc = "Delete current buffer" })
+vim.keymap.set("n", "<leader>bD", ":bdelete!<CR>", { desc = "Force delete buffer" })
+
+-- Close all buffers except current
+vim.keymap.set("n", "<leader>bo", function()
+	local current = vim.api.nvim_get_current_buf()
+	local buffers = vim.api.nvim_list_bufs()
+	for _, buf in ipairs(buffers) do
+		if buf ~= current and vim.api.nvim_buf_is_loaded(buf) and vim.api.nvim_buf_get_option(buf, "buflisted") then
+			vim.api.nvim_buf_delete(buf, { force = false })
+		end
+	end
+end, { desc = "Close all other buffers" })
+
+-- Close all buffers
+vim.keymap.set("n", "<leader>bD", function()
+	local buffers = vim.api.nvim_list_bufs()
+	for _, buf in ipairs(buffers) do
+		if vim.api.nvim_buf_is_loaded(buf) and vim.api.nvim_buf_get_option(buf, "buflisted") then
+			vim.api.nvim_buf_delete(buf, { force = false })
+		end
+	end
+end, { desc = "Close all buffers" })
+
+-- Quick buffer picker via Telescope (already configured in telescope.lua)
+-- <leader>fb is mapped to telescope.builtin.buffers
