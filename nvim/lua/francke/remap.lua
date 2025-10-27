@@ -53,8 +53,10 @@ vim.g.mapleader = " "
 -- Quick escape from insert mode
 vim.keymap.set("i", "jk", "<ESC>")
 
--- To filebrowser
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- File explorers (configured in their respective plugin files)
+-- <leader>pv - Oil.nvim (edit filesystem like a buffer)
+-- Cmd+b or <leader>e - nvim-tree (sidebar file explorer)
+-- The actual keybindings are set in oil.lua and nvim-tree.lua
 
 -- Copy whole file
 vim.keymap.set("n", "<C-c>", "<cmd> %y+ <CR>")
