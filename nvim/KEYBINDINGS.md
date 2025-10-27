@@ -3,6 +3,8 @@
 **Leader key:** `SPACE`
 **Pro tip:** Press `SPACE` and wait - which-key will show you all available commands!
 
+> 📖 **New!** Check out [VISUAL_IMPROVEMENTS.md](./VISUAL_IMPROVEMENTS.md) to see all the visual enhancements (smooth animations, beautiful statusline, modern UI, and more)!
+
 ## 🚀 Essential Commands (Start Here)
 
 | Key | Action | Notes |

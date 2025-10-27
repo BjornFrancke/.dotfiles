@@ -23,6 +23,6 @@
 
 require('francke.lazy')
 require('francke.remap')
-require('francke.statusline')
+-- require('francke.statusline') -- Replaced with lualine plugin
 require('francke.set')
 require('francke.custom.snippets')
