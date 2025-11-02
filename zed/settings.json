@@ -1,0 +1,154 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+
+{
+	"languages": {
+		"JavaScript": { "formatter": { "language_server": { "name": "biome" } } },
+		"TypeScript": { "formatter": { "language_server": { "name": "biome" } } },
+		"TSX": { "formatter": { "language_server": { "name": "biome" } } },
+		"JSON": { "formatter": { "language_server": { "name": "biome" } } },
+		"JSONC": { "formatter": { "language_server": { "name": "biome" } } },
+		"CSS": { "formatter": { "language_server": { "name": "biome" } } },
+	},
+	"show_edit_predictions": false,
+	"vim_mode": false,
+	// UI Config
+	"icon_theme": "Material Icon Theme",
+	"base_keymap": "VSCode",
+	"ui_font_size": 12,
+	"buffer_font_size": 12,
+	"ui_font_family": "JetBrainsMono Nerd Font Mono",
+	"buffer_font_family": "JetBrainsMono Nerd Font Mono",
+	"theme": {
+		"mode": "system",
+		"light": "One Light",
+		"dark": "Ayu Darker"
+	},
+	// Status bar
+	"line_indicator_format": "short",
+	"title_bar": {
+		"show_branch_icon": false,
+		"show_user_picture": false,
+		"show_onboarding_banner": false,
+		"show_menus": false,
+		"show_sign_in": false
+	},
+	"unnecessary_code_fade": 0.3,
+
+	"gutter": {
+		"line_numbers": true, // Show/hide line numbers in the gutter.
+		"runnables": false, // Show/hide runnables buttons in the gutter.
+		"breakpoints": false, // Show/hide show breakpoints in the gutter.
+		"folds": false, // Show/hide show fold buttons in the gutter.
+		"min_line_number_digits": 3 // Reserve space for N digit line numbers
+	},
+
+	"toolbar": {
+		"selections_menu": true,
+		"agent_review": false,
+		"quick_actions": false
+	},
+
+	"project_panel": {
+		"dock": "right",
+		"button": false,
+		"git_status": true,
+		"indent_size": 13,
+		"sticky_scroll": true,
+		"entry_spacing": "standard",
+		"scrollbar": { "show": "never" },
+		"hide_root": true,
+		"indent_guides": { "show": "always" }
+	},
+
+	"status_bar": {
+		"cursor_position_button": false
+	},
+
+	"notification_panel": {
+		"dock": "left"
+	},
+	"agent": {
+		"default_profile": "ask",
+		"dock": "left",
+		"default_model": {
+			"provider": "anthropic",
+			"model": "claude-sonnet-4-5-latest"
+		}
+	},
+	"features": {
+		"edit_prediction_provider": "zed"
+	},
+
+	"max_tabs": 6,
+
+	"collaboration_panel": {
+		"button": false
+	},
+	"tab_bar": {
+		"show": true,
+		"show_nav_history_buttons": false,
+		"show_tab_bar_buttons": false
+	},
+	"tabs": {
+		"show_close_button": "hover",
+		"file_icons": true,
+		"git_status": false
+	},
+	"file_scan_exclusions": [
+		"**/.git",
+		"**/.svn",
+		"**/.hg",
+		"**/CVS",
+		"**/.DS_Store",
+		"**/Thumbs.db",
+		"**/.classpath",
+		"**/.settings",
+		"**/dist",
+		"**/.vscode"
+	],
+	"relative_line_numbers": true,
+	"autosave": "on_focus_change",
+	// Whether to show full labels in line indicator or short ones
+	//   - `short`: "2 s, 15 l, 32 c"
+	//   - `long`: "2 selections, 15 lines, 32 characters"
+
+	"auto_indent": true,
+	// Individual status bar icons can be hidden:
+	// "project_panel": {"button": false },
+	// "outline_panel": {"button": false },
+	// "collaboration_panel": {"button": false },
+	// "chat_panel": {"button": "never" },
+	"git_panel": { "button": false },
+	// "notification_panel": {"button": false },
+	// "agent": {"button": false },
+	// "debugger": {"button": false },
+	// "diagnostics": {"button": false },
+	"search": { "button": false },
+
+	"inlay_hints": { "enabled": true },
+	"cursor_blink": true,
+	"indent_guides": {
+		"enabled": true,
+		"coloring": "indent_aware",
+		"line_width": 3,
+		"background_coloring": "disabled"
+	},
+	"lsp": {
+		"biome": {
+			"binary": {
+				"path": "/opt/homebrew/Cellar/biome/2.3.0/bin/biome",
+				"arguments": ["lsp-proxy"]
+			},
+			"settings": {
+"require_config_file": true
+			}
+		}
+	}
+}

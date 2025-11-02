@@ -1,0 +1,107 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "j k": ["workspace::SendKeystrokes", "escape"]
+    }
+  },
+  {
+    "context": "vim_mode == normal && Editor",
+    "bindings": {}
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      "tab": "pane::ActivateNextItem",
+      "shift-tab": "pane::ActivatePreviousItem"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      // visual, visual line & visual block modes
+      "g c": "editor::ToggleComments"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-1": ["pane::ActivateItem", 0],
+      "cmd-2": ["pane::ActivateItem", 1],
+      "cmd-3": ["pane::ActivateItem", 2],
+      "cmd-4": ["pane::ActivateItem", 3],
+      "cmd-5": ["pane::ActivateItem", 4],
+      "cmd-6": ["pane::ActivateItem", 5],
+      "cmd-7": ["pane::ActivateItem", 6],
+      "cmd-8": ["pane::ActivateItem", 7],
+      "cmd-9": ["pane::ActivateItem", 8],
+      "cmd-0": "pane::ActivateLastItem",
+      "cmd-k s": "pane::SplitRight"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-1": ["workspace::ActivatePane", 0],
+      "cmd-2": ["workspace::ActivatePane", 1],
+      "cmd-3": ["workspace::ActivatePane", 2],
+      "cmd-4": ["workspace::ActivatePane", 3],
+      "cmd-5": ["workspace::ActivatePane", 4],
+      "cmd-6": ["workspace::ActivatePane", 5],
+      "cmd-7": ["workspace::ActivatePane", 6],
+      "cmd-8": ["workspace::ActivatePane", 7],
+      "cmd-9": ["workspace::ActivatePane", 8],
+      "cmd-k h": "workspace::ActivatePaneLeft",
+      "cmd-k j": "workspace::ActivatePaneDown",
+      "cmd-k k": "workspace::ActivatePaneUp",
+      "cmd-k l": "workspace::ActivatePaneRight",
+      "cmd-b": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "cmd-.": "project_panel::NewFile",
+      "cmd-,": "project_panel::NewDirectory",
+      "f2": "project_panel::Rename",
+      "cmd-shift-c": "workspace::CopyPath",
+      "enter": "project_panel::Open"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-shift-f": "editor::Format"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-shift-g": "git_panel::Close"
+    }
+  },
+  {
+    "context": "Global",
+    "bindings": {
+      "cmd-shift-g": "git_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-cmd-b": "workspace::ToggleLeftDock"
+    }
+  }
+]
