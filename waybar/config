@@ -1,0 +1,80 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 28,
+    "spacing": 8,
+    "margin-top": 6,
+    "margin-left": 10,
+    "margin-right": 10,
+
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "cpu",
+        "memory",
+        "wireplumber",
+        "battery",
+        "tray",
+        "custom/power"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-scroll-up": "hyprctl dispatch workspace e+1 1>/dev/null",
+        "on-scroll-down": "hyprctl dispatch workspace e-1 1>/dev/null",
+        "sort-by-number": true,
+        "active-only": false
+    },
+
+    "clock": {
+        "format": "{:%a %d %b  %H:%M}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>"
+    },
+
+    "cpu": {
+        "interval": 5,
+        "format": "  {usage}%",
+        "max-length": 10
+    },
+
+    "memory": {
+        "interval": 10,
+        "format": "  {percentage}%",
+        "tooltip-format": "{used:0.1f}GB / {total:0.0f}GB"
+    },
+
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-muted": "  muted",
+        "format-icons": ["", "", ""],
+        "on-click": "pavucontrol",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+
+    "battery": {
+        "interval": 30,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "tray": {
+        "icon-size": 14,
+        "spacing": 8
+    },
+
+    "custom/power": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "wlogout"
+    }
+}
