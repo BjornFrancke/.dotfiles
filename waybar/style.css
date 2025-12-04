@@ -52,12 +52,21 @@
 /* Module separator look */
 #cpu,
 #memory,
+#network,
 #wireplumber,
 #battery,
 #custom-power {
     padding: 0 8px;
     color: #a3a3a3;
     border-left: 1px solid #333;
+}
+
+#network {
+    color: #a3a3a3;
+}
+
+#network.disconnected {
+    color: #525252;
 }
 
 #cpu {
