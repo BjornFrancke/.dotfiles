@@ -2,8 +2,7 @@
 # Ghostty Configuration
 # ----------------------------------------
 
-# Theme - custom colors below
-theme = dark:custom,light:custom
+# No theme - using custom colors below
 
 # Background & Foreground
 background = 1a1a1a
