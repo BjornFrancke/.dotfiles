@@ -1,0 +1,39 @@
+# Mako notification config - Claude Code Theme
+
+# Layout
+max-visible=5
+layer=overlay
+anchor=top-right
+margin=10
+padding=12,15
+
+# Appearance
+font=MesloLGS Nerd Font 10
+background-color=#1a1a1aee
+text-color=#a3a3a3
+border-color=#333333
+border-size=1
+border-radius=6
+
+# Icons
+max-icon-size=32
+icon-path=/usr/share/icons/Papirus-Dark
+
+# Behavior
+default-timeout=5000
+ignore-timeout=0
+
+# Urgency styles
+[urgency=low]
+background-color=#1a1a1add
+border-color=#333333
+
+[urgency=normal]
+background-color=#1a1a1aee
+border-color=#333333
+
+[urgency=critical]
+background-color=#1a1a1aee
+border-color=#e07a5f
+text-color=#f0f0f0
+default-timeout=0
