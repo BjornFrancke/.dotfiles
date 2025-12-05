@@ -1,0 +1,10 @@
+allow_images=true
+hide_scroll=true
+no_actions=false
+term=ghostty
+mode=drun
+prompt=
+width=400
+height=300
+insensitive=true
+matching=fuzzy
