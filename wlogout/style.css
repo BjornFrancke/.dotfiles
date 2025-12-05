@@ -1,0 +1,50 @@
+* {
+    background-image: none;
+    box-shadow: none;
+    font-family: "MesloLGS Nerd Font", monospace;
+}
+
+window {
+    background-color: rgba(26, 26, 26, 0.9);
+}
+
+button {
+    border-radius: 6px;
+    border-color: #333333;
+    text-decoration-color: #a3a3a3;
+    color: #a3a3a3;
+    background-color: #262626;
+    border-style: solid;
+    border-width: 1px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20%;
+    margin: 8px;
+}
+
+button:focus, button:active, button:hover {
+    background-color: #333333;
+    border-color: #e07a5f;
+    color: #e07a5f;
+    outline-style: none;
+}
+
+#lock {
+    background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+}
+
+#shutdown {
+    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+}
