@@ -2,26 +2,67 @@
 # Ghostty Configuration
 # ----------------------------------------
 
-theme = ayu
-# macos-option-as-alt = left
-macos-option-as-alt = false
-macos-titlebar-style = tabs
-background = 0E1418
+# Theme - custom colors below
+theme = dark:custom,light:custom
+
+# Background & Foreground
+background = 1a1a1a
+foreground = a3a3a3
+
+# Cursor
+cursor-color = e07a5f
+cursor-style = block
+cursor-style-blink = false
+
+# Selection
+selection-background = 333333
+selection-foreground = f0f0f0
+
+# Color palette (0-15)
+# Black
+palette = 0=#1a1a1a
+palette = 8=#525252
+
+# Red
+palette = 1=#ef4444
+palette = 9=#f87171
+
+# Green
+palette = 2=#81b29a
+palette = 10=#a3d9c0
+
+# Yellow/Orange (accent)
+palette = 3=#d4a574
+palette = 11=#e07a5f
+
+# Blue
+palette = 4=#6b8cae
+palette = 12=#89a8c4
+
+# Magenta
+palette = 5=#a37acc
+palette = 13=#b99be0
+
+# Cyan
+palette = 6=#7daea3
+palette = 14=#9fc5bc
+
+# White
+palette = 7=#a3a3a3
+palette = 15=#f0f0f0
 
 
 # ----------------------------------------
 # Fonts
 # ----------------------------------------
 
+font-family = MesloLGS Nerd Font
 font-size = 12
 font-feature = liga
 font-thicken = true
 
 # Adjust underline for nvim indent
 adjust-underline-thickness = 4
-
-# Cursor
-cursor-style = block
 
 
 # ----------------------------------------
@@ -30,18 +71,18 @@ cursor-style = block
 
 window-padding-balance = true
 window-padding-x = 10
-window-padding-y = 5
+window-padding-y = 8
+
+# No decorations for cleaner look with Hyprland
+gtk-titlebar = false
 
 
 # ----------------------------------------
-# Dock icon
+# Behavior
 # ----------------------------------------
 
-#macos-icon = custom-style
-#macos-icon-ghost-color = ffffff
-#macos-icon-frame = plastic
-#macos-icon-screen-color = dark grey,black
+copy-on-select = clipboard
+mouse-hide-while-typing = true
 
-macos-icon = holographic
-
+# Keybinds
 keybind = shift+enter=text:\n
