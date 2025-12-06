@@ -68,35 +68,23 @@ vim.opt.cmdheight = 1
 -- Don't show mode (lualine shows it)
 vim.opt.showmode = false
 
--- Swiss Modernist Borders - Geometric, precise
--- Using box-drawing characters for clean, grid-based design
-local border_chars = {
-	{ "╔", "FloatBorder" },
-	{ "═", "FloatBorder" },
-	{ "╗", "FloatBorder" },
-	{ "║", "FloatBorder" },
-	{ "╝", "FloatBorder" },
-	{ "═", "FloatBorder" },
-	{ "╚", "FloatBorder" },
-	{ "║", "FloatBorder" },
-}
-
+-- Better floating window borders
 vim.diagnostic.config({
 	float = {
-		border = border_chars,
+		border = "rounded",
 		source = "always",
 		header = "",
-		prefix = "■ ", -- Swiss modernist bullet
+		prefix = "",
 	},
 })
 
 -- Set border for hover and signature help
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-	border = border_chars,
+	border = "rounded",
 })
 
 vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-	border = border_chars,
+	border = "rounded",
 })
 
 -- Better signcolumn

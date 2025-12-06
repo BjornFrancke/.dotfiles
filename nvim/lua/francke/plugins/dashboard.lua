@@ -6,24 +6,24 @@ return {
 		local alpha = require("alpha")
 		local dashboard = require("alpha.themes.dashboard")
 
-		-- Swiss Modernist ASCII Art
-		-- Geometric, grid-based, minimal
-		dashboard.section.header.val = {
-			[[                                                    ]],
-			[[  ╔══════════════════════════════════════════════╗  ]],
-			[[  ║                                              ║  ]],
-			[[  ║     ███╗   ██╗███████╗ ██████╗ ██╗   ██╗   ║  ]],
-			[[  ║     ████╗  ██║██╔════╝██╔═══██╗██║   ██║   ║  ]],
-			[[  ║     ██╔██╗ ██║█████╗  ██║   ██║██║   ██║   ║  ]],
-			[[  ║     ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝   ║  ]],
-			[[  ║     ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝    ║  ]],
-			[[  ║     ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝     ║  ]],
-			[[  ║                                              ║  ]],
-			[[  ╚══════════════════════════════════════════════╝  ]],
-			[[                                                    ]],
-			[[           SWISS STYLE / MODERNIST EDITION          ]],
-			[[                                                    ]],
-		}
+        -- Swiss Modernist ASCII Art
+        -- Geometric, grid-based, minimal
+        dashboard.section.header.val = {
+            [[                                                    ]],
+            [[  ╔══════════════════════════════════════════════╗  ]],
+            [[  ║                                              ║  ]],
+            [[  ║    ███╗   ██╗███████╗ ██████╗ ██╗   ██╗      ║  ]],
+            [[  ║    ████╗  ██║██╔════╝██╔═══██╗██║   ██║      ║  ]],
+            [[  ║    ██╔██╗ ██║█████╗  ██║   ██║██║   ██║      ║  ]],
+            [[  ║    ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝      ║  ]],
+            [[  ║    ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝       ║  ]],
+            [[  ║    ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝        ║  ]],
+            [[  ║                                              ║  ]],
+            [[  ╚══════════════════════════════════════════════╝  ]],
+            [[                                                    ]],
+            [[                  FRANCKE EDITION                   ]],
+            [[                                                    ]],
+        }
 
 		-- Menu buttons with clean typography
 		dashboard.section.buttons.val = {
@@ -65,10 +65,13 @@ return {
 		vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
 
 		-- Custom highlight groups for Swiss theme
+		-- Accent color (matches modernist-theme.lua)
+		local accent = "#4A9EFF"  -- Electric Blue - change this to match your theme!
+
 		vim.api.nvim_create_autocmd("User", {
 			pattern = "AlphaReady",
 			callback = function()
-				vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#E84A4A", bold = true }) -- Swiss red
+				vim.api.nvim_set_hl(0, "DashboardHeader", { fg = accent, bold = true }) -- Your accent color
 				vim.api.nvim_set_hl(0, "DashboardCenter", { fg = "#E8E8E8" }) -- White
 				vim.api.nvim_set_hl(0, "DashboardFooter", { fg = "#909090", italic = true }) -- Gray
 			end,

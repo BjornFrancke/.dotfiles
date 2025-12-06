@@ -14,6 +14,26 @@
 | `Cmd+b` | Toggle sidebar | nvim-tree file explorer (VSCode-style) |
 | `<leader>e` | Toggle sidebar | Alternative to Cmd+b |
 | `-` | Open parent directory | Oil.nvim (edit filesystem like buffer) |
+| `<leader>f` | Format buffer | Uses Biome for JS/TS/JSON |
+| `<leader>l` | Lint current file | Manually trigger Biome linting |
+
+## 🎨 Formatting & Linting (Biome)
+
+**Manual formatting:** Use `<leader>f` to format when ready
+**Linting:** Runs automatically on save and insert leave
+
+| Key | Action | Notes |
+|-----|--------|-------|
+| `<leader>f` | Format buffer | Uses Biome (async) |
+| `<leader>l` | Lint file | Manually trigger linting |
+
+**Supported filetypes:**
+- JavaScript (`.js`, `.jsx`)
+- TypeScript (`.ts`, `.tsx`)
+- JSON (`.json`, `.jsonc`)
+- CSS (`.css`)
+
+> 📖 See [BIOME_SETUP.md](./BIOME_SETUP.md) for configuration and enabling auto-format on save
 
 ## 📁 File Explorers
 

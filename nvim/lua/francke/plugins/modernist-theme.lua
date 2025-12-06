@@ -8,18 +8,35 @@
 -- - Monochromatic with bold accent
 -- - Mathematical proportions
 -- - Emphasis on negative space
+--
+-- CURRENTLY DISABLED - Using original Ayu theme instead
+-- To re-enable: Remove "enabled = false" below
 -- ========================================
 
 return {
 	-- Custom colorscheme override for Ayu with Swiss modernist principles
 	{
 		"Shatur/neovim-ayu",
+		enabled = false, -- DISABLED - using original Ayu
 		lazy = false,
 		priority = 1000,
 		config = function()
-			-- Swiss Modernist Color Palette
-			-- Base: Monochromatic grays
-			-- Accent: Swiss Red
+			-- ========================================
+			-- SWISS MODERNIST COLOR PALETTE
+			-- ========================================
+			-- Easy color switcher - just change the accent!
+
+			-- 🎨 CHOOSE YOUR ACCENT COLOR (uncomment one):
+			local accent = "#4A9EFF"     -- Electric Blue (current)
+			-- local accent = "#FF6B35"  -- Sunset Orange
+			-- local accent = "#00D9FF"  -- Cyber Cyan
+			-- local accent = "#39FF14"  -- Neon Green
+			-- local accent = "#9D4EDD"  -- Deep Purple
+			-- local accent = "#0077BE"  -- Ocean Blue
+			-- local accent = "#2D8659"  -- Forest Green
+			-- local accent = "#E84A4A"  -- Swiss Red (original)
+			-- local accent = "#YOUR_HEX" -- Custom color!
+
 			local colors = {
 				-- Monochromatic base (Swiss style uses limited palette)
 				black = "#0A0A0A",
@@ -28,9 +45,9 @@ return {
 				light_gray = "#909090",
 				white = "#E8E8E8",
 
-				-- Swiss Red - the signature accent
-				swiss_red = "#E84A4A",
-				red_dark = "#C23030",
+				-- Primary accent (your chosen color)
+				accent = accent,
+				accent_dark = accent, -- Could make darker if needed
 
 				-- Functional colors (minimal, precise)
 				warning = "#F0A020",
@@ -56,18 +73,18 @@ return {
 					NormalNC = { bg = colors.black, fg = colors.light_gray },
 
 					-- Strong geometric borders (Swiss precision)
-					FloatBorder = { fg = colors.swiss_red, bg = colors.dark_gray },
+					FloatBorder = { fg = colors.accent, bg = colors.dark_gray },
 					WinSeparator = { fg = colors.medium_gray, bg = "NONE" },
 					VertSplit = { fg = colors.medium_gray, bg = "NONE" },
 
-					-- Cursor and selection - Swiss red accent
+					-- Cursor and selection - accent color
 					CursorLine = { bg = colors.dark_gray },
-					CursorLineNr = { fg = colors.swiss_red, bold = true },
+					CursorLineNr = { fg = colors.accent, bold = true },
 					LineNr = { fg = colors.light_gray },
 					Visual = { bg = colors.medium_gray },
 
 					-- Search - bold accent
-					IncSearch = { fg = colors.black, bg = colors.swiss_red, bold = true },
+					IncSearch = { fg = colors.black, bg = colors.accent, bold = true },
 					Search = { fg = colors.black, bg = colors.light_gray },
 
 					-- Statusline - grid-based, asymmetric
@@ -76,14 +93,14 @@ return {
 
 					-- Completion menu - clean hierarchy
 					Pmenu = { fg = colors.white, bg = colors.dark_gray },
-					PmenuSel = { fg = colors.black, bg = colors.swiss_red, bold = true },
+					PmenuSel = { fg = colors.black, bg = colors.accent, bold = true },
 					PmenuSbar = { bg = colors.medium_gray },
-					PmenuThumb = { bg = colors.swiss_red },
+					PmenuThumb = { bg = colors.accent },
 
 					-- Tabs - grid elements
 					TabLine = { fg = colors.light_gray, bg = colors.dark_gray },
 					TabLineFill = { bg = colors.black },
-					TabLineSel = { fg = colors.black, bg = colors.swiss_red, bold = true },
+					TabLineSel = { fg = colors.black, bg = colors.accent, bold = true },
 
 					-- Signs and diagnostics - minimal, functional
 					SignColumn = { bg = colors.black },
@@ -110,12 +127,12 @@ return {
 					Identifier = { fg = colors.white },
 					Function = { fg = colors.blue },
 
-					Statement = { fg = colors.swiss_red, bold = true },
-					Conditional = { fg = colors.swiss_red, bold = true },
-					Repeat = { fg = colors.swiss_red, bold = true },
-					Label = { fg = colors.swiss_red },
+					Statement = { fg = colors.accent, bold = true },
+					Conditional = { fg = colors.accent, bold = true },
+					Repeat = { fg = colors.accent, bold = true },
+					Label = { fg = colors.accent },
 					Operator = { fg = colors.light_gray },
-					Keyword = { fg = colors.swiss_red, bold = true },
+					Keyword = { fg = colors.accent, bold = true },
 					Exception = { fg = colors.error, bold = true },
 
 					PreProc = { fg = colors.magenta },
@@ -131,53 +148,53 @@ return {
 
 					Special = { fg = colors.cyan },
 					SpecialChar = { fg = colors.cyan },
-					Tag = { fg = colors.swiss_red },
+					Tag = { fg = colors.accent },
 					Delimiter = { fg = colors.light_gray },
 					SpecialComment = { fg = colors.light_gray, italic = true },
 					Debug = { fg = colors.error },
 
 					-- Markdown - typographic hierarchy
-					["@markup.heading.1"] = { fg = colors.swiss_red, bold = true },
-					["@markup.heading.2"] = { fg = colors.swiss_red },
+					["@markup.heading.1"] = { fg = colors.accent, bold = true },
+					["@markup.heading.2"] = { fg = colors.accent },
 					["@markup.heading.3"] = { fg = colors.white, bold = true },
 					["@markup.strong"] = { bold = true },
 					["@markup.italic"] = { italic = true },
 					["@markup.link"] = { fg = colors.blue, underline = true },
-					["@markup.list"] = { fg = colors.swiss_red },
+					["@markup.list"] = { fg = colors.accent },
 
 					-- Modern UI elements
 					-- Telescope (grid-based layout)
-					TelescopeBorder = { fg = colors.swiss_red, bg = colors.dark_gray },
-					TelescopeSelection = { fg = colors.black, bg = colors.swiss_red, bold = true },
-					TelescopeSelectionCaret = { fg = colors.swiss_red, bg = colors.swiss_red },
-					TelescopePromptPrefix = { fg = colors.swiss_red, bold = true },
+					TelescopeBorder = { fg = colors.accent, bg = colors.dark_gray },
+					TelescopeSelection = { fg = colors.black, bg = colors.accent, bold = true },
+					TelescopeSelectionCaret = { fg = colors.accent, bg = colors.accent },
+					TelescopePromptPrefix = { fg = colors.accent, bold = true },
 
 					-- Which-key (clear hierarchy)
-					WhichKey = { fg = colors.swiss_red, bold = true },
+					WhichKey = { fg = colors.accent, bold = true },
 					WhichKeyGroup = { fg = colors.blue },
 					WhichKeyDesc = { fg = colors.white },
 					WhichKeySeparator = { fg = colors.light_gray },
 					WhichKeyFloat = { bg = colors.dark_gray },
-					WhichKeyBorder = { fg = colors.swiss_red, bg = colors.dark_gray },
+					WhichKeyBorder = { fg = colors.accent, bg = colors.dark_gray },
 
 					-- NvimTree (grid structure)
 					NvimTreeNormal = { bg = colors.dark_gray },
 					NvimTreeNormalNC = { bg = colors.dark_gray },
-					NvimTreeRootFolder = { fg = colors.swiss_red, bold = true },
+					NvimTreeRootFolder = { fg = colors.accent, bold = true },
 					NvimTreeFolderName = { fg = colors.white },
-					NvimTreeFolderIcon = { fg = colors.swiss_red },
-					NvimTreeOpenedFolderName = { fg = colors.swiss_red },
+					NvimTreeFolderIcon = { fg = colors.accent },
+					NvimTreeOpenedFolderName = { fg = colors.accent },
 					NvimTreeSymlink = { fg = colors.cyan },
 					NvimTreeGitDirty = { fg = colors.warning },
 					NvimTreeGitNew = { fg = colors.success },
 					NvimTreeGitDeleted = { fg = colors.error },
-					NvimTreeSpecialFile = { fg = colors.swiss_red },
+					NvimTreeSpecialFile = { fg = colors.accent },
 					NvimTreeIndentMarker = { fg = colors.medium_gray },
 
 					-- Noice (minimal notifications)
 					NoiceCmdlinePopup = { bg = colors.dark_gray },
-					NoiceCmdlinePopupBorder = { fg = colors.swiss_red, bg = colors.dark_gray },
-					NoiceCmdlineIcon = { fg = colors.swiss_red },
+					NoiceCmdlinePopupBorder = { fg = colors.accent, bg = colors.dark_gray },
+					NoiceCmdlineIcon = { fg = colors.accent },
 				},
 			})
 			vim.cmd("colorscheme ayu")

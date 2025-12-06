@@ -3,31 +3,12 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	event = "VeryLazy",
 	config = function()
-		-- Swiss Modernist theme for lualine
-		local custom_theme = {
-			normal = {
-				a = { fg = "#0A0A0A", bg = "#E84A4A", gui = "bold" }, -- Swiss red
-				b = { fg = "#E8E8E8", bg = "#1A1A1A" },
-				c = { fg = "#909090", bg = "#0A0A0A" },
-			},
-			insert = { a = { fg = "#0A0A0A", bg = "#6090D0", gui = "bold" } },
-			visual = { a = { fg = "#0A0A0A", bg = "#A060A0", gui = "bold" } },
-			replace = { a = { fg = "#0A0A0A", bg = "#F0A020", gui = "bold" } },
-			command = { a = { fg = "#0A0A0A", bg = "#50A0A0", gui = "bold" } },
-			inactive = {
-				a = { fg = "#909090", bg = "#1A1A1A" },
-				b = { fg = "#909090", bg = "#0A0A0A" },
-				c = { fg = "#909090", bg = "#0A0A0A" },
-			},
-		}
-
 		require("lualine").setup({
 			options = {
 				icons_enabled = true,
-				theme = custom_theme,
-				-- Swiss modernist separators - geometric, not rounded
-				component_separators = { left = "│", right = "│" },
-				section_separators = { left = "▌", right = "▐" },
+				theme = "ayu", -- Matches your Ayu colorscheme
+				component_separators = { left = "", right = "" },
+				section_separators = { left = "", right = "" },
 				disabled_filetypes = {
 					statusline = { "NvimTree", "alpha", "dashboard" },
 					winbar = {},
