@@ -46,9 +46,4 @@ alias -s ts=nvim
 alias -s js=nvim
 
 # Fancy
-
-# Make directory and enter it
-mdd() { 
-    mkdir -p $1
-    cd $1
-}
+alias lzd='lazydocker'
