@@ -1,4 +1,0 @@
-# Profile file, runs on login. Environmental variables are set here.
-
-export EDITOR="nvim"
-
