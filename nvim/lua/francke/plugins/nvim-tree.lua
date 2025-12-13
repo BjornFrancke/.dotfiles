@@ -15,30 +15,36 @@ return {
 			view = {
 				side = "right",
 				width = 35,
-				-- Preserve window layout when opening files
 				preserve_window_proportions = true,
+				cursorline = true,
 			},
 			-- Renderer settings
 			renderer = {
+				-- Collapse single nested folders for cleaner look
+				group_empty = true,
 				-- Show git status icons
 				icons = {
+					git_placement = "after",
+					padding = " ",
 					show = {
 						git = true,
 						folder = true,
 						file = true,
 						folder_arrow = true,
+						modified = true,
 					},
 					glyphs = {
-						default = "",
+						default = "󰈚",
 						symlink = "",
+						modified = "●",
 						git = {
-							unstaged = "✗",
-							staged = "✓",
+							unstaged = "",
+							staged = "",
 							unmerged = "",
-							renamed = "➜",
-							untracked = "★",
+							renamed = "󰁕",
+							untracked = "",
 							deleted = "",
-							ignored = "◌",
+							ignored = "",
 						},
 						folder = {
 							arrow_open = "",
@@ -56,7 +62,7 @@ return {
 				indent_markers = {
 					enable = true,
 					icons = {
-						corner = "└",
+						corner = "╰",
 						edge = "│",
 						item = "│",
 						none = " ",
@@ -64,8 +70,12 @@ return {
 				},
 				-- Highlight opened files
 				highlight_opened_files = "name",
+				highlight_git = "name",
+				highlight_modified = "name",
 				-- Root folder modifier
-				root_folder_label = ":~:s?$?/..?",
+				root_folder_label = ":t",
+				-- Special files
+				special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md", "package.json" },
 			},
 			-- Update the focused file on `BufEnter`, un-collapses the folders recursively until it finds the file
 			update_focused_file = {

@@ -162,6 +162,7 @@ return {
 			vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = "Resume last picker" })
 
 			-- Vim pickers
+			vim.keymap.set('n', '<leader>:', builtin.commands, { desc = "Command palette" })
 			vim.keymap.set('n', '<leader>fk', builtin.keymaps, { desc = "Keymaps" })
 			vim.keymap.set('n', '<leader>fm', builtin.marks, { desc = "Marks" })
 			vim.keymap.set('n', '<leader>fj', builtin.jumplist, { desc = "Jumplist" })
