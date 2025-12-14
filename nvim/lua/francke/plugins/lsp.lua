@@ -115,6 +115,13 @@ return {
                             includeInlayFunctionLikeReturnTypeHints = true,
                             includeInlayEnumMemberValueHints = true,
                         },
+                        suggest = {
+                            completeFunctionCalls = true,
+                        },
+                        preferences = {
+                            includeCompletionsForModuleExports = true,
+                            includeCompletionsForImportStatements = true,
+                        },
                     },
                     javascript = {
                         inlayHints = {
@@ -125,6 +132,13 @@ return {
                             includeInlayPropertyDeclarationTypeHints = true,
                             includeInlayFunctionLikeReturnTypeHints = true,
                             includeInlayEnumMemberValueHints = true,
+                        },
+                        suggest = {
+                            completeFunctionCalls = true,
+                        },
+                        preferences = {
+                            includeCompletionsForModuleExports = true,
+                            includeCompletionsForImportStatements = true,
                         },
                     },
                 },
