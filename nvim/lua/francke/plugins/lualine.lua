@@ -55,7 +55,7 @@ return {
 					},
 					{
 						"diagnostics",
-						sources = { "coc" }, -- Using CoC for diagnostics
+						sources = { "nvim_lsp" },
 						sections = { "error", "warn", "info", "hint" },
 						diagnostics_color = {
 							error = "DiagnosticError",
@@ -83,10 +83,6 @@ return {
 								if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
 									return " " .. client.name
 								end
-							end
-							-- Check for CoC
-							if vim.g.coc_status then
-								return " CoC"
 							end
 							return ""
 						end,
