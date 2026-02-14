@@ -13,3 +13,6 @@ gui:
     "refactor": "#41A9A0"
     "feat": "#a6da95"
     "production": "#4CFF64"
+git:
+  pagers:
+    - pager: delta --dark --paging=never
