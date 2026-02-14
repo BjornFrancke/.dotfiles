@@ -1,3 +1,4 @@
+tap "anomalyco/tap"
 tap "charmbracelet/tap"
 tap "d12frosted/emacs-plus"
 tap "felixkratz/formulae"
@@ -21,6 +22,8 @@ brew "giflib"
 brew "libpng"
 # Official Amazon AWS command-line interface
 brew "awscli"
+# Terminal bandwidth utilization tool
+brew "bandwhich"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -41,21 +44,21 @@ brew "eza"
 brew "fastfetch"
 # Build, deploy and configure Fastly services
 brew "fastly"
-# Framework for layout and rendering of i18n text
-brew "pango"
 # Banner-like program prints strings as ASCII art
 brew "figlet"
 # Command-line fuzzy finder written in Go
 brew "fzf"
-# Utility for downloading TV and radio programmes from BBC iPlayer
-brew "get_iplayer"
 # GitHub command-line tool
 brew "gh"
+# Framework for layout and rendering of i18n text
+brew "pango"
 # Distributed revision control system
 brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
-# GNU Pretty Good Privacy (PGP) package
+# GNU Privacy Guard (OpenPGP)
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
@@ -65,6 +68,8 @@ brew "goimports"
 brew "golangci-lint"
 # Apply a diff file to an original
 brew "gpatch"
+# Library to render SVG files using Cairo
+brew "librsvg"
 # Like cURL, but for gRPC
 brew "grpcurl"
 # Tool for glamorous shell scripts
@@ -75,6 +80,8 @@ brew "handbrake"
 brew "helix"
 # Kubernetes package manager
 brew "helm"
+# Alternative to the official immich-CLI command written in Go
+brew "immich-go"
 # Istio configuration command-line utility
 brew "istioctl"
 # Image manipulation library
@@ -93,10 +100,6 @@ brew "lazydocker"
 brew "lazygit"
 # Postgres C API library
 brew "libpq", link: true
-# Library to render SVG files using Cairo
-brew "librsvg"
-# Rainbows and unicorns in your console!
-brew "lolcat"
 # Clone of ls with colorful output, file type icons, and more
 brew "lsd"
 # Language Server for the Lua language
@@ -105,6 +108,8 @@ brew "lua-language-server"
 brew "luarocks"
 # Run a Kubernetes cluster locally
 brew "minikube"
+# Deep clean and optimize your Mac
+brew "mole"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Control nvim processes using `nvr` command-line tool
@@ -123,12 +128,18 @@ brew "openjdk@21"
 brew "pandoc"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
+# Draw UML diagrams
+brew "plantuml"
 # Fast, disk space efficient package manager
 brew "pnpm"
 # Theme for zsh
 brew "powerlevel10k"
+# Multi-agent orchestration framework for autonomous AI task completion
+brew "ralph-orchestrator"
 # Rsync for cloud storage
 brew "rclone"
 # Command-line toolbox for fancy output in the terminal
@@ -175,6 +186,8 @@ brew "zsh-autocomplete"
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# The AI coding agent built for the terminal.
+brew "anomalyco/tap/opencode"
 # Generate images of code and terminal output.
 brew "charmbracelet/tap/freeze"
 # Custom macOS statusbar with shell plugin, interaction and graph support
@@ -197,8 +210,12 @@ brew "withgraphite/tap/graphite"
 cask "1password-cli"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
+# Ambient sound mixer for creating custom soundscapes
+cask "blankie"
 # OpenAI's coding agent that runs in your terminal
 cask "codex"
+# OpenAI's Codex desktop app for managing coding agents
+cask "codex-app"
 # Server and cloud storage browser
 cask "cyberduck"
 # Disk space visualiser
@@ -215,12 +232,8 @@ cask "font-hack-nerd-font"
 cask "font-powerline-symbols"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
-# Free and open-source image editor
-cask "gimp"
 # Web browser
 cask "google-chrome"
-# Desktop automation application
-cask "hammerspoon"
 # Free and open-source media player
 cask "iina"
 # Tool to optimise images to a smaller size
@@ -233,10 +246,6 @@ cask "istat-menus"
 cask "jdownloader"
 # Keyboard customiser
 cask "karabiner-elements"
-# Multi-document editor by KDE
-cask "kate"
-# Automation software
-cask "keyboard-maestro"
 # GPU-based terminal emulator
 cask "kitty"
 # Free cross-platform office suite, fresh version
@@ -247,42 +256,30 @@ cask "mac-mouse-fix"
 cask "mactex"
 # Open-source software for live streaming and screen recording
 cask "obs"
-# Replacement for Docker Desktop
-cask "orbstack"
-# GUI client for PostgreSQL databases
-cask "postico"
 # Collaboration platform for API development
 cask "postman"
+# Client for Proton Drive
+cask "proton-drive"
 # Client for Proton Mail and Proton Calendar
 cask "proton-mail"
 # VPN client focusing on security
 cask "protonvpn"
 # Control your tools with a few keystrokes
 cask "raycast"
-# Advanced API Debugging Proxy
-cask "reqable"
-# Open source virtual/remote desktop application
-cask "rustdesk"
 # Screenshot measurement and annotation tool
 cask "shottr"
 # Music streaming service
 cask "spotify"
-# Git client
-cask "sublime-merge"
 # Text editor for code, markup and prose
 cask "sublime-text"
 # Native GUI tool for relational databases
 cask "tableplus"
 # SSH client
 cask "termius"
-# Media management tool
-cask "tinymediamanager"
 # Open-source BitTorrent client
 cask "transmission"
 # Multimedia player
 cask "vlc"
-# GPU-accelerated cross-platform terminal emulator and multiplexer
-cask "wezterm"
 # Native desktop client for WhatsApp
 cask "whatsapp"
 # Image-converter and resiser tool
@@ -297,29 +294,29 @@ cask "zen"
 cask "zettlr"
 # Video communication and virtual meeting platform
 cask "zoom"
+vscode "anthropic.claude-code"
 vscode "biomejs.biome"
 vscode "bradlc.vscode-tailwindcss"
 vscode "dbaeumer.vscode-eslint"
 vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
 vscode "formulahendry.auto-rename-tag"
-vscode "hubspot.hubl"
+vscode "graphite.gti-vscode"
+vscode "johnpapa.vscode-peacock"
 vscode "miguelsolorio.fluent-icons"
-vscode "mikestead.dotenv"
 vscode "mjmlio.vscode-mjml"
-vscode "ms-vscode-remote.remote-ssh"
-vscode "ms-vscode-remote.remote-ssh-edit"
-vscode "ms-vscode.remote-explorer"
-vscode "ms-vscode.remote-server"
 vscode "oderwat.indent-rainbow"
 vscode "openai.chatgpt"
+vscode "oven.bun-vscode"
 vscode "pkief.material-icon-theme"
 vscode "redhat.vscode-yaml"
+vscode "ritwickdey.liveserver"
 vscode "sumneko.lua"
 vscode "teabyii.ayu"
 vscode "unifiedjs.vscode-mdx"
 vscode "usernamehw.errorlens"
 vscode "yoavbls.pretty-ts-errors"
+vscode "zoellner.openapi-preview"
 go "github.com/go-delve/delve/cmd/dlv"
 go "mvdan.cc/gofumpt"
 go "github.com/nametake/golangci-lint-langserver"
