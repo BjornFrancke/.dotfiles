@@ -89,12 +89,6 @@
   },
   {
     "bindings": {
-      "cmd-shift-g": "git_panel::Close"
-    }
-  },
-  {
-    "context": "Global",
-    "bindings": {
       "cmd-shift-g": "git_panel::ToggleFocus"
     }
   },

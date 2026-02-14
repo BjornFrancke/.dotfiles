@@ -8,22 +8,51 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 
 {
-	"bottom_dock_layout": "contained",
+	"outline_panel": {
+  "indent_guides": {
+   "show": "always"
+  },
+  "folder_icons": true,
+  "file_icons": true,
+  "button": true
+ },
+ "preview_tabs": {
+  "enable_preview_from_file_finder": true
+ },
+ "diagnostics": {
+  "button": true
+ },
+ "debugger": {
+  "button": false
+ },
+ "terminal": {
+  "button": false
+ },
+ "which_key": {
+  "enabled": true
+ },
+ "bottom_dock_layout": "contained",
  "tab_size": 2,
  "auto_signature_help": false,
  "agent_ui_font_size": 12.0,
  "buffer_font_weight": 400.0,
  "edit_predictions": {
+  "provider": "zed",
   "mode": "subtle"
  },
  "agent_servers": {
+  "opencode": {
+   "type": "registry"
+  },
   "w": {
+   "type": "custom",
    "command": "path_to_executable",
    "args": [],
    "env": {}
   }
  },
  "git": {
+  "disable_git": false,
   "blame": {
    "show_avatar": false
   }
@@ -40,7 +69,7 @@
 	"show_edit_predictions": false,
 	"vim_mode": false,
 	// UI Config
-	"icon_theme": "JetBrains New UI Icons (Dark)",
+	"icon_theme": "Material Icon Theme",
 	"base_keymap": "VSCode",
 	"ui_font_size": 12.0,
 	"buffer_font_size": 12,
@@ -50,7 +79,8 @@
 	// Status bar
 	"line_indicator_format": "short",
 	"title_bar": {
-		"show_branch_icon": false,
+		"show_project_items": true,
+  "show_branch_icon": false,
 		"show_user_picture": false,
 		"show_onboarding_banner": false,
 		"show_menus": false,
@@ -67,16 +97,18 @@
 	},
 
 	"toolbar": {
-		"selections_menu": true,
+		"selections_menu": false,
 		"agent_review": false,
 		"quick_actions": false
 	},
 
 	"project_panel": {
-		"dock": "right",
+		"bold_folder_labels": true,
+  "default_width": 230.0,
+  "dock": "right",
 		"button": false,
 		"git_status": true,
-		"indent_size": 13,
+		"indent_size": 13.0,
 		"sticky_scroll": true,
 		"entry_spacing": "standard",
 		"scrollbar": { "show": "never" },
@@ -89,18 +121,20 @@
 	},
 
 	"notification_panel": {
-		"dock": "left"
+		"button": false,
+  "dock": "left"
 	},
 	"agent": {
 		"default_profile": "write",
-		"dock": "left",
+		"dock": "right",
 		"default_model": {
 			"provider": "zed.dev",
 			"model": "claude-sonnet-4-5"
-		}
-	},
-	"features": {
-		"edit_prediction_provider": "zed"
+		},
+		"commit_message_model": {
+      "provider": "openai",
+      "model": "gpt-4o-mini"
+    },
 	},
 
 	"max_tabs": 6,
@@ -109,12 +143,14 @@
 		"button": false
 	},
 	"tab_bar": {
-		"show": true,
+		"show_pinned_tabs_in_separate_row": false,
+  "show": true,
 		"show_nav_history_buttons": false,
 		"show_tab_bar_buttons": false
 	},
 	"tabs": {
-		"show_close_button": "hover",
+		"show_diagnostics": "off",
+  "show_close_button": "hidden",
 		"file_icons": true,
 		"git_status": false
 	},
@@ -141,16 +177,10 @@
 	//   - `long`: "2 selections, 15 lines, 32 characters"
 
 	"auto_indent": true,
-	// Individual status bar icons can be hidden:
-	// "project_panel": {"button": false },
-	// "outline_panel": {"button": false },
-	// "collaboration_panel": {"button": false },
-	// "chat_panel": {"button": "never" },
-	"git_panel": { "button": true },
-	// "notification_panel": {"button": false },
-	// "agent": {"button": false },
-	// "debugger": {"button": false },
-	// "diagnostics": {"button": false },
+	"git_panel": { "tree_view": true,
+                "default_width": 300.0,
+                "dock": "right",
+                "button": true },
 	"search": { "button": false },
 
 	"inlay_hints": { "show_background": false,
