@@ -1,0 +1,131 @@
+{
+  "editor.accessibilitySupport": "off",
+  "redhat.telemetry.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit",
+
+    "source.fixAll.biome": "explicit"
+  },
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "editor.fontFamily": "JetBrainsMonoNerdFontMono-Medium",
+  "editor.fontWeight": "normal",
+  "prettier.bracketSameLine": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "git.confirmSync": false,
+  "indentRainbow.indicatorStyle": "light",
+  "indentRainbow.lightIndicatorStyleLineWidth": 2,
+  "git.suggestSmartCommit": false,
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.minimap.enabled": false,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "editor.stickyScroll.enabled": false,
+  "workbench.startupEditor": "none",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.enableImages": true,
+  "nuxtr.defaultPackageManager": "Yarn",
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "workbench.sideBar.location": "right",
+  "editor.mouseWheelZoom": true,
+  "workbench.fontAliasing": "auto",
+  "workbench.editorAssociations": {
+    "*.svg": "default"
+  },
+  "workbench.colorTheme": "Ayu Dark",
+  "workbench.iconTheme": "ayu",
+  "workbench.editor.closeOnFileDelete": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.glyphMargin": false,
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.cursorStyle": "block",
+  "editor.cursorBlinking": "phase",
+  "workbench.panel.showLabels": false,
+  "editor.defaultFormatter": "biomejs.biome",
+  "git.openRepositoryInParentFolders": "always",
+  "editor.linkedEditing": true,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "workbench.editor.showTabs": "single",
+  "custom-ui-style.electron": {
+    "titleBarStyle": "hiddenInset",
+    "trafficLightPosition": {
+      "x": 20,
+      "y": 16
+    }
+  },
+  "workbench.activityBar.location": "hidden",
+  "update.showReleaseNotes": false,
+  "workbench.productIconTheme": "fluent-icons",
+  "custom-ui-style.stylesheet": {
+    ".quick-input-widget": "top: 25vh !important"
+  },
+  "extensions.ignoreRecommendations": true,
+  "editor.showFoldingControls": "never",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "editor.lightbulb.enabled": "off",
+  "workbench.editor.empty.hint": "hidden",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.guides.highlightActiveIndentation": false,
+    "editor.guides.indentation": false,
+  "chat.commandCenter.enabled": false,
+  "biome.suggestInstallingGlobally": false,
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "biome.configurationPath": "workspace",
+  "vscode_custom_css.imports": [
+    "file:///Users/bjorn/dotfiles/vscode/custom.css"
+  ],
+  "workbench.navigationControl.enabled": false,
+  "window.commandCenter": false,
+  "window.menuStyle": "custom",
+  "workbench.layoutControl.enabled": false,
+  "[mjml]": {
+    "editor.defaultFormatter": "mjmlio.vscode-mjml"
+  },
+  "files.autoSave": "afterDelay",
+  "claudeCode.preferredLocation": "panel",
+  "claudeCode.useTerminal": true,
+  "typescript.tsserver.log": "off",
+  "less.format.enable": false,
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://biomejs.dev": true
+  }
+
+}
