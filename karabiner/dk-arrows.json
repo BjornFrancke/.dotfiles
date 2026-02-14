@@ -1,0 +1,32 @@
+{
+    "description": "DK: Right Shift + (- key) => >, Right Shift + (. key) => <",
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "slash",
+                "modifiers": {
+                    "mandatory": ["right_shift"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "non_us_backslash",
+                    "modifiers": ["shift"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "from": {
+                "key_code": "period",
+                "modifiers": {
+                    "mandatory": ["right_shift"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [{ "key_code": "non_us_backslash" }],
+            "type": "basic"
+        }
+    ]
+}
