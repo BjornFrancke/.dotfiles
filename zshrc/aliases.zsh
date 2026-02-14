@@ -45,5 +45,10 @@ alias emptytrash='rm -rf ~/.Trash/*' # purge macOS Trash
 alias -s ts=nvim
 alias -s js=nvim
 
+##### Fastfetch #####
+alias ff='fastfetch'
+alias ffm='fastfetch -c ~/.config/fastfetch/presets/minimal.jsonc'
+alias ffd='fastfetch -c ~/.config/fastfetch/presets/dev.jsonc'
+
 # Fancy
 alias lzd='lazydocker'

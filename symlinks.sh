@@ -29,6 +29,7 @@ SYMLINKS=(
     "p10k/.p10k.zsh:~/.p10k.zsh"
 
     # Tools
+    "fastfetch:~/.config/fastfetch"
     "yazi:~/.config/yazi"
     "lazygit/config.yml:~/Library/Application Support/lazygit/config.yml"
     "karabiner:~/.config/karabiner"
