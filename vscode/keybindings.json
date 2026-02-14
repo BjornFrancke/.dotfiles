@@ -1,0 +1,88 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+shift+alt+cmd+p",
+        "command": "workbench.action.pinEditor",
+        "when": "!activeEditorIsPinned"
+    },
+    {
+        "key": "cmd+k shift+enter",
+        "command": "-workbench.action.pinEditor",
+        "when": "!activeEditorIsPinned"
+    },
+    {
+        "key": "ctrl+shift+alt+cmd+p",
+        "command": "workbench.action.unpinEditor",
+        "when": "activeEditorIsPinned"
+    },
+    {
+        "key": "cmd+k shift+enter",
+        "command": "-workbench.action.unpinEditor",
+        "when": "activeEditorIsPinned"
+    },
+    {
+        "key": "shift+cmd+a",
+        "command": "-notification.acceptPrimaryAction",
+        "when": "notificationFocus || notificationToastsVisible"
+    },
+    {
+        "key": "shift+cmd+a",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "shift+cmd+g",
+        "command": "workbench.view.scm",
+        "when": "workbench.scm.active"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-workbench.view.scm",
+        "when": "workbench.scm.active"
+    },
+    {
+        "key": "cmd+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "cmd+n",
+        "command": "-chatgpt.newChat",
+        "when": "chatgpt.supportsNewChatKeyShortcut"
+    },
+    {
+        "key": "cmd+n",
+        "command": "-workbench.action.chat.newChat",
+        "when": "chatIsEnabled && inChat"
+    },
+    {
+        "key": "cmd+n",
+        "command": "-workbench.action.openChat",
+        "when": "chatIsEnabled && inChat && inChatEditor"
+    },
+    {
+        "key": "cmd+n",
+        "command": "-chatEditor.action.undoHunk",
+        "when": "chatEdits.hasEditorModifications && editorFocus && !chatEdits.isRequestInProgress || chatEdits.hasEditorModifications && notebookCellListFocused && !chatEdits.isRequestInProgress"
+    },
+    {
+        "key": "cmd+n",
+        "command": "explorer.newFile"
+    },
+    {
+        "key": "shift+cmd+n",
+        "command": "-chatEditor.action.reject",
+        "when": "chatEdits.hasEditorModifications && editorFocus && !chatEdits.isRequestInProgress || chatEdits.hasEditorModifications && notebookEditorFocused && !chatEdits.isRequestInProgress"
+    },
+    {
+        "key": "shift+cmd+n",
+        "command": "-inlineChat2.undo",
+        "when": "inlineChatHasEditsAgent && inlineChatVisible && !chatEdits.isRequestInProgress"
+    },
+    {
+        "key": "shift+cmd+n",
+        "command": "-workbench.action.newWindow"
+    },
+    {
+        "key": "shift+alt+n",
+        "command": "explorer.newFolder"
+    }
+]
