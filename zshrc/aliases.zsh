@@ -17,7 +17,7 @@ alias speed='speedtest-cli' # Quickly test internet speed
 alias myip='curl http://ipecho.net/plain; echo' # Get public ip
 alias ports='lsof -nP -iTCP -sTCP:LISTEN'  # see open TCP ports
 
-
+alias nvim='NVIM_APPNAME=nvim-francke nvim'
 alias vim='nvim'
 alias e='$EDITOR'
 ##### Zellij #####
