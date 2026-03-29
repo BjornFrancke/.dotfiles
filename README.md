@@ -1,3 +1,7 @@
+
+![nvim.png] (https://francke.dev/nvim.png)
+
+
 # Dotfiles
 
 ## How to
