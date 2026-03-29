@@ -152,8 +152,6 @@ brew "ruby"
 brew "ruby@3.1"
 # Safe, concurrent, practical language
 brew "rust"
-# Command-line interface for https://speedtest.net bandwidth tests
-brew "speedtest-cli"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # Scriptable music downloader for Qobuz, Tidal, SoundCloud, and Deezer
@@ -166,6 +164,8 @@ brew "taplo"
 brew "tealdeer"
 # Terminal multiplexer
 brew "tmux"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Watch files and take action when they change
 brew "watchman"
 # Internet file retriever
@@ -208,10 +208,14 @@ brew "thezoraiz/ascii-image-converter/ascii-image-converter"
 brew "withgraphite/tap/graphite"
 # Command-line interface for 1Password
 cask "1password-cli"
+# Note editor and whiteboard
+cask "affine"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
 # Ambient sound mixer for creating custom soundscapes
 cask "blankie"
+# Ghostty-based terminal with vertical tabs and notifications for AI coding agents
+cask "cmux"
 # OpenAI's coding agent that runs in your terminal
 cask "codex"
 # OpenAI's Codex desktop app for managing coding agents
@@ -222,6 +226,8 @@ cask "cyberduck"
 cask "daisydisk"
 # Voice and text chat software
 cask "discord"
+# Developer platform
+cask "dotnet-sdk"
 # Online diagram software
 cask "drawio"
 # Launch builds and start simulators from your menu bar
@@ -266,10 +272,10 @@ cask "proton-mail"
 cask "protonvpn"
 # Control your tools with a few keystrokes
 cask "raycast"
-# Screenshot measurement and annotation tool
-cask "shottr"
 # Music streaming service
 cask "spotify"
+# Spotify and iTunes in the menu bar
+cask "spotmenu"
 # Text editor for code, markup and prose
 cask "sublime-text"
 # Native GUI tool for relational databases
@@ -278,10 +284,6 @@ cask "tableplus"
 cask "termius"
 # Open-source BitTorrent client
 cask "transmission"
-# Multimedia player
-cask "vlc"
-# Native desktop client for WhatsApp
-cask "whatsapp"
 # Image-converter and resiser tool
 cask "xnconvert"
 # REST, GraphQL and gRPC client
@@ -295,6 +297,7 @@ cask "zettlr"
 # Video communication and virtual meeting platform
 cask "zoom"
 vscode "anthropic.claude-code"
+vscode "bierner.markdown-mermaid"
 vscode "biomejs.biome"
 vscode "bradlc.vscode-tailwindcss"
 vscode "dbaeumer.vscode-eslint"
