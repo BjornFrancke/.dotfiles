@@ -1,5 +1,5 @@
 
-![nvim.png] (https://francke.dev/nvim.png)
+[nvim.png] (https://francke.dev/nvim.png)
 
 
 # Dotfiles
