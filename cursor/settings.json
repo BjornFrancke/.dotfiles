@@ -1,238 +1,127 @@
 {
-  "editor.accessibilitySupport": "off",
-  "java.format.settings.url": "/Users/bjorn/Library/Application Support/Code/User/globalStorage/vscjava.vscode-java-pack/java-formatter.xml",
-  "liveServer.settings.donotShowInfoMsg": true,
-  "redhat.telemetry.enabled": true,
-  "terminal.integrated.env.osx": {
-    "FIG_NEW_SESSION": "1"
-  },
-  "editor.fontFamily": "JetBrainsMonoNerdFontMono-Medium",
-  "editor.fontWeight": "normal",
-  "editor.codeActionsOnSave": {
-    "source.organizeImports.biome": "explicit",
-    "source.fixAll.biome": "explicit"
-  },
-  "prettier.bracketSameLine": true,
-  "[typescript]": {
-    "editor.defaultFormatter": "biomejs.biome"
-  },
-  "git.confirmSync": false,
-  "git.suggestSmartCommit": false,
-  "editor.gotoLocation.multipleDefinitions": "goto",
-  "editor.minimap.enabled": false,
-  "explorer.compactFolders": true,
-
-  "[python]": {
-    "editor.formatOnType": true
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "tailwindCSS.emmetCompletions": true,
-  "editor.stickyScroll.enabled": false,
-  "workbench.startupEditor": "none",
-  "terminal.integrated.fontFamily": "MesloLGS NF",
-  "terminal.external.osxExec": "iTerm.app",
-  "terminal.integrated.enableImages": true,
-  "nuxtr.defaultPackageManager": "Yarn",
-  "editor.quickSuggestions": {
-    "strings": "on"
-  },
-  "workbench.sideBar.location": "right",
-  "workbench.fontAliasing": "auto",
-  "workbench.editorAssociations": {
-    "*.svg": "default",
-    "*.html": "default"
-  },
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.defaultFormatter": "biomejs.biome",
-  "git.openRepositoryInParentFolders": "always",
-  "cursor.general.gitGraphIndexing": "enabled",
-  "cursor.cmdk.autoSelect": false,
-  "editor.formatOnSave": true,
-  "cursor.general.enableShadowWorkspace": true,
-  "cursor.composer.shouldAllowCustomModes": true,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "cursor.cpp.disabledLanguages": ["markdown"],
-  "editor.unicodeHighlight.invisibleCharacters": false,
-  "editor.unicodeHighlight.ambiguousCharacters": false,
-  "vscodeReactRefactor.enableDebug": true,
-  "editor.cursorStyle": "block",
-  "files.trimFinalNewlines": true,
-  "workbench.colorCustomizations": {
-    "[Vira*]": {
-      "toolbar.activeBackground": "#39EA5F26",
-      "button.background": "#39EA5F",
-      "button.hoverBackground": "#39EA5Fcc",
-      "extensionButton.separator": "#39EA5F33",
-      "extensionButton.background": "#39EA5F14",
-      "extensionButton.foreground": "#39EA5F",
-      "extensionButton.hoverBackground": "#39EA5F33",
-      "extensionButton.prominentForeground": "#39EA5F",
-      "extensionButton.prominentBackground": "#39EA5F14",
-      "extensionButton.prominentHoverBackground": "#39EA5F33",
-      "activityBarBadge.background": "#39EA5F",
-      "activityBar.activeBorder": "#39EA5F",
-      "activityBarTop.activeBorder": "#39EA5F",
-      "list.inactiveSelectionIconForeground": "#39EA5F",
-      "list.activeSelectionForeground": "#39EA5F",
-      "list.inactiveSelectionForeground": "#39EA5F",
-      "list.highlightForeground": "#39EA5F",
-      "sash.hoverBorder": "#39EA5F80",
-      "list.activeSelectionIconForeground": "#39EA5F",
-      "scrollbarSlider.activeBackground": "#39EA5F80",
-      "editorSuggestWidget.highlightForeground": "#39EA5F",
-      "textLink.foreground": "#39EA5F",
-      "progressBar.background": "#39EA5F",
-      "pickerGroup.foreground": "#39EA5F",
-      "tab.activeBorder": "#39EA5F",
-      "notificationLink.foreground": "#39EA5F",
-      "editorWidget.resizeBorder": "#39EA5F",
-      "editorWidget.border": "#39EA5F",
-      "settings.modifiedItemIndicator": "#39EA5F",
-      "panelTitle.activeBorder": "#39EA5F",
-      "breadcrumb.activeSelectionForeground": "#39EA5F",
-      "menu.selectionForeground": "#39EA5F",
-      "menubar.selectionForeground": "#39EA5F",
-      "editor.findMatchBorder": "#39EA5F",
-      "selection.background": "#39EA5F40",
-      "statusBarItem.remoteBackground": "#39EA5F14",
-      "statusBarItem.remoteHoverBackground": "#39EA5F",
-      "statusBarItem.remoteForeground": "#39EA5F",
-      "notebook.inactiveFocusedCellBorder": "#39EA5F80",
-      "commandCenter.activeBorder": "#39EA5F80",
-      "chat.slashCommandForeground": "#39EA5F",
-      "chat.avatarForeground": "#39EA5F",
-      "activityBarBadge.foreground": "#000000",
-      "button.foreground": "#000000",
-      "statusBarItem.remoteHoverForeground": "#000000",
-      "editor.lineHighlightBackground": "#ffffff0f",
-      "editor.lineHighlightBorder": "#ffffff00"
-    }
-  },
-  "workbench.colorTheme": "Ayu Dark",
-  "workbench.iconTheme": "material-icon-theme",
-  "material-icon-theme.activeIconPack": "react",
-  "editor.scrollbar.horizontalScrollbarSize": 10,
-  "editor.cursorBlinking": "phase",
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.scrollbar.verticalScrollbarSize": 8,
-  "editor.glyphMargin": false,
-  "editor.inlayHints.maximumLength": 40,
-  "editor.showFoldingControls": "never",
-  "workbench.productIconTheme": "icons-carbon",
-  "extensions.ignoreRecommendations": true,
-  "editor.guides.highlightActiveIndentation": false,
-  "editor.guides.indentation": false,
-  "workbench.navigationControl.enabled": false,
-  "bracket-pair-colorizer-2.highlightActiveScope": true,
-  "indentRainbow.indicatorStyle": "light",
-  "indentRainbow.lightIndicatorStyleLineWidth": 2,
-  "workbench.layoutControl.enabled": false,
-  "material-icon-theme.files.color": "#7cb342",
-  "sync.gist": "82ff5b54e0aa3d5ac25a08af724151b5",
-  "sync.forceDownload": true,
-  "editor.overviewRulerBorder": false,
-  "workbench.editor.tabActionCloseVisibility": false,
-  "workbench.tips.enabled": false,
-  "workbench.activityBar.location": "hidden",
-  "workbench.editor.closeOnFileDelete": true,
-  "workbench.panel.showLabels": false,
-  "errorLens.gutterIconSet": "circle",
-  "cSpell.language": "en,da",
-  "biome.requireConfiguration": true,
-  "cSpell.enabledFileTypes": {
-    "yaml": false,
-    "yml": false,
-    "json": false,
-    "sql": false
-  },
-  "workbench.tree.renderIndentGuides": "always",
-  "window.density.editorTabHeight": "compact",
-  "scm.defaultViewMode": "tree",
-  "cSpell.userWords": [
-    "apikey",
-    "Apim",
-    "argb",
-    "autodocs",
-    "axiomhq",
-    "BYDAY",
-    "bymonth",
-    "bymonthday",
-    "bypos",
-    "bysecond",
-    "bysetpos",
-    "byweekday",
-    "byweekno",
-    "byyearday",
-    "cellspacing",
-    "corporates",
-    "CURDATE",
-    "daygrid",
-    "deliverit",
-    "dfns",
-    "dtstart",
-    "DTSTART",
-    "friday",
-    "fullcalendar",
-    "Genbestil",
-    "ilike",
-    "jose",
-    "Keypair",
-    "ldhu",
-    "mapbox",
-    "mjml",
-    "nbsp",
-    "notifytype",
-    "nowrap",
-    "nuqs",
-    "plecto",
-    "Plecto",
-    "postgres",
-    "postgresql",
-    "posthog",
-    "Preorder",
-    "rabbitmq",
-    "RABBITMQ",
-    "rrule",
-    "Rrule",
-    "RRULE",
-    "rrules",
-    "rrulestr",
-    "Segoe",
-    "SUPERADMIN",
-    "tailscale",
-    "tbody",
-    "tribehappiness",
-    "unbilled",
-    "Unbilled",
-    "uncollectible",
-    "USERID",
-    "uuid",
-    "uuidv",
-    "vonage",
-    "whitelabel",
-    "wkst",
-    "wordmark"
-  ],
-  "files.autoSave": "afterDelay",
-  "cursor.agent_layout_browser_beta_setting": true,
-  "workbench.activityBar.orientation": "vertical",
-  "cSpell.customDictionaries": {},
-  "window.title": "${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}${activeRepositoryBranchName}",
-  "editor.detectIndentation": false,
-  "editor.tabSize": 2,
-  "typescript.updateImportsOnFileMove.enabled": "always"
+    "editor.accessibilitySupport": "off",
+    "redhat.telemetry.enabled": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports.biome": "explicit",
+        "source.fixAll.biome": "explicit"
+    },
+    "terminal.integrated.env.osx": {
+        "FIG_NEW_SESSION": "1"
+    },
+    "editor.fontFamily": "JetBrainsMonoNerdFontMono-Medium",
+    "editor.fontWeight": "normal",
+    "prettier.bracketSameLine": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "git.confirmSync": false,
+    "indentRainbow.indicatorStyle": "light",
+    "indentRainbow.lightIndicatorStyleLineWidth": 2,
+    "git.suggestSmartCommit": false,
+    "editor.gotoLocation.multipleDefinitions": "goto",
+    "editor.minimap.enabled": false,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "tailwindCSS.emmetCompletions": true,
+    "editor.stickyScroll.enabled": false,
+    "workbench.startupEditor": "none",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.enableImages": true,
+    "nuxtr.defaultPackageManager": "Yarn",
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
+    "workbench.sideBar.location": "right",
+    "workbench.fontAliasing": "auto",
+    "workbench.editorAssociations": {
+        "*.svg": "default"
+    },
+    "workbench.colorTheme": "Ayu Dark",
+    "workbench.editor.closeOnFileDelete": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.glyphMargin": false,
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.cursorStyle": "block",
+    "editor.cursorBlinking": "phase",
+    "workbench.panel.showLabels": false,
+    "editor.defaultFormatter": "biomejs.biome",
+    "git.openRepositoryInParentFolders": "always",
+    "editor.linkedEditing": true,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "workbench.editor.showTabs": "single",
+    "custom-ui-style.electron": {
+        "titleBarStyle": "hiddenInset",
+        "trafficLightPosition": {
+            "x": 20,
+            "y": 16
+        }
+    },
+    "update.showReleaseNotes": false,
+    "workbench.productIconTheme": "fluent-icons",
+    "custom-ui-style.stylesheet": {
+        ".quick-input-widget": "top: 25vh !important"
+    },
+    "extensions.ignoreRecommendations": true,
+    "editor.showFoldingControls": "never",
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "editor.lightbulb.enabled": "off",
+    "workbench.editor.empty.hint": "hidden",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "editor.guides.highlightActiveIndentation": false,
+    "editor.guides.indentation": false,
+    "chat.commandCenter.enabled": false,
+    "biome.suggestInstallingGlobally": false,
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "biome.configurationPath": "workspace",
+    "vscode_custom_css.imports": [
+        "file:///Users/bjorn/dotfiles/vscode/custom.css"
+    ],
+    "workbench.navigationControl.enabled": false,
+    "window.commandCenter": false,
+    "window.menuStyle": "custom",
+    "[mjml]": {
+        "editor.defaultFormatter": "mjmlio.vscode-mjml"
+    },
+    "files.autoSave": "afterDelay",
+    "claudeCode.preferredLocation": "panel",
+    "claudeCode.useTerminal": true,
+    "typescript.tsserver.log": "off",
+    "less.format.enable": false,
+    "json.schemaDownload.trustedDomains": {
+        "https://schemastore.azurewebsites.net/": true,
+        "https://raw.githubusercontent.com/": true,
+        "https://www.schemastore.org/": true,
+        "https://json.schemastore.org/": true,
+        "https://json-schema.org/": true,
+        "https://biomejs.dev": true
+    },
+    "workbench.layoutControl.enabled": false,
+    "cursor.composer.suggestNextPrompt": true
 }
