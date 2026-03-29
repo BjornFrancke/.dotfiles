@@ -18,29 +18,6 @@ set.showmode = false
 -- Automatically reload files when changed externally (e.g., by Claude Code, git, etc.)
 set.autoread = true
 
-
--- Check for file changes when:
--- - Entering a buffer
--- - Gaining focus
--- - After shell commands
--- - When cursor stops moving (CursorHold)
-vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
-    group = vim.api.nvim_create_augroup("AutoReload", { clear = true }),
-    callback = function()
-        if vim.fn.getcmdwintype() == "" then
-            vim.cmd("checktime")
-        end
-    end,
-})
-
--- Notify when file is reloaded
-vim.api.nvim_create_autocmd("FileChangedShellPost", {
-    group = vim.api.nvim_create_augroup("AutoReloadNotify", { clear = true }),
-    callback = function()
-        vim.notify("File changed on disk. Buffer reloaded.", vim.log.levels.INFO)
-    end,
-})
-
 -- Show whitespace characters (subtle)
 vim.opt.list = true
 vim.opt.listchars = {

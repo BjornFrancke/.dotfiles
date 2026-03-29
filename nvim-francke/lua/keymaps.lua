@@ -7,7 +7,7 @@ local defaults = {
 vim.g.mapleader = " "
 
 -- Exit file
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, defaults)
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, defaults)
 
 -- Yank whole file
 vim.keymap.set("n", "<C-c>", "<cmd> %y+ <CR>", defaults)
