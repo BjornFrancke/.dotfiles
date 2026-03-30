@@ -16,4 +16,8 @@ return {
 		results = { "─", " ", "─", "│", "╭", "─", "─", "╰" },
 		preview = { "─", "│", "─", "│", "─", "╮", "╯", "╰" },
 	},
+    bufferline = {
+        modifited = "●",
+        pinned = "󰐃"
+    }
 }
