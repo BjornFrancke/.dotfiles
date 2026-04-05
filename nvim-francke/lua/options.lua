@@ -38,8 +38,17 @@ set.listchars = {
 	nbsp = "␣",
 }
 
+set.inccommand = "split"
+
+-- Search settings
 set.hlsearch = false
 set.incsearch = true
+set.smartcase = true
+set.ignorecase = true
+
+-- Window title
+set.title = true
+set.titlestring = '%t%( %M%)%( (%{expand("%:~:h")})%)%a (nvim)'
 
 set.backup = false
 set.writebackup = false

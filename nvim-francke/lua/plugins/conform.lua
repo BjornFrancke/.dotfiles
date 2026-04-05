@@ -15,6 +15,12 @@ return {
 			lua = { "stylua" },
 
 			cs = { "csharpier" },
+
+				terraform = { "terraform_fmt" },
+				tf = { "terraform_fmt" },
+
+				yaml = { "yamlfmt" },
+				["yaml.ansible"] = {},
 		},
 
 		format_on_save = {
