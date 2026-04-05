@@ -12,6 +12,8 @@ vim.filetype.add({
   },
 })
 
+vim.treesitter.language.register("yaml", "yaml.ansible")
+
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "yaml.ansible",
   callback = function()

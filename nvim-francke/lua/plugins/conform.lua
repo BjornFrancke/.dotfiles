@@ -20,7 +20,7 @@ return {
 				tf = { "terraform_fmt" },
 
 				yaml = { "yamlfmt" },
-				["yaml.ansible"] = {},
+				["yaml.ansible"] = { "yamlfmt" },
 		},
 
 		format_on_save = {

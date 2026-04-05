@@ -69,7 +69,11 @@ require("lazy").setup({
 		{
 			"numToStr/Comment.nvim",
 			opts = {
-				-- add any options here
+				pre_hook = function()
+					if vim.bo.filetype == "yaml.ansible" then
+						return "# %s"
+					end
+				end,
 			},
 		},
 		{
