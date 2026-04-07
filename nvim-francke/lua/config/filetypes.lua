@@ -1,6 +1,7 @@
 vim.filetype.add({
   extension = {
     http = "http",
+    mjml = "mjml",
   },
   pattern = {
     [".*/playbooks/.*%.ya?ml"] = "yaml.ansible",
@@ -13,6 +14,14 @@ vim.filetype.add({
 })
 
 vim.treesitter.language.register("yaml", "yaml.ansible")
+vim.treesitter.language.register("html", "mjml")
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "mjml",
+  callback = function()
+    vim.treesitter.start()
+  end,
+})
 
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "yaml.ansible",

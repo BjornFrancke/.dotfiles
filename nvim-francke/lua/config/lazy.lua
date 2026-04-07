@@ -35,6 +35,8 @@ require("lazy").setup({
 					"yamlfmt",
 					"ansible-language-server",
 					"ansible-lint",
+					"html-lsp",
+					"prettier",
 				},
 			},
 		},
@@ -79,8 +81,8 @@ require("lazy").setup({
 		{
 			"nvim-treesitter/nvim-treesitter",
 			build = ":TSUpdate",
-			opts = {
-				ensure_installed = {
+			config = function()
+				require("nvim-treesitter").install({
 					"c_sharp",
 					"lua",
 					"vim",
@@ -95,10 +97,8 @@ require("lazy").setup({
 					"terraform",
 					"hcl",
 					"yaml",
-				},
-				highlight = { enable = true },
-				indent = { enable = true },
-			},
+				})
+			end,
 		},
 	},
 	change_detection = { notify = false },

@@ -21,6 +21,8 @@ return {
 
 				yaml = { "yamlfmt" },
 				["yaml.ansible"] = { "yamlfmt" },
+
+				mjml = { "prettier" },
 		},
 
 		format_on_save = {
