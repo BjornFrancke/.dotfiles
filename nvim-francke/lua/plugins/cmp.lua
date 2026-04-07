@@ -50,6 +50,9 @@ return {
 			default = { "lsp", "path", "snippets", "buffer" },
 
 			-- Sources are configured via the sources.providers table
+			per_filetype = {
+				markdown = {},
+			},
 		},
 
 		-- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
