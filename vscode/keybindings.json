@@ -86,8 +86,7 @@
         "command": "explorer.newFolder"
     },
     {
-        "key": "alt+cmd+s",
-        "command": "workbench.action.toggleUnifiedSidebarFromKeyboard",
-        "when": "cursor.agentIdeUnification.enabled == true && !isAuxiliaryWindowFocusedContext"
+        "key": "shift+cmd+c",
+        "command": "claude-vscode.sidebar.open"
     }
 ]

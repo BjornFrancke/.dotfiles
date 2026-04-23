@@ -115,7 +115,7 @@
     "editor.defaultFormatter": "mjmlio.vscode-mjml"
   },
   "files.autoSave": "afterDelay",
-  "claudeCode.preferredLocation": "panel",
+  "claudeCode.preferredLocation": "sidebar",
   "claudeCode.useTerminal": true,
   "typescript.tsserver.log": "off",
   "less.format.enable": false,
@@ -127,6 +127,6 @@
     "https://json-schema.org/": true,
     "https://biomejs.dev": true,
     "https://turbo.build": true
-  }
+  }, 
 
 }
