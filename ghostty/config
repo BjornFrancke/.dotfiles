@@ -5,7 +5,7 @@
 theme = ayu
 # macos-option-as-alt = left
 macos-option-as-alt = false
-macos-titlebar-style = tabs
+macos-titlebar-style = hidden
 background = 0E1418
 
 
