@@ -20,20 +20,68 @@
   },
   {
     "context": "vim_mode == normal && Editor",
-    "bindings": {}
+    "bindings": {
+      "g D": "editor::GoToDeclaration",
+      "g i": "editor::GoToImplementation"
+    }
   },
   {
     "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
     "bindings": {
       "tab": "pane::ActivateNextItem",
-      "shift-tab": "pane::ActivatePreviousItem"
+      "shift-tab": "pane::ActivatePreviousItem",
+
+      // Telescope equivalents
+      "space f f": "file_finder::Toggle",
+      "space f g": "pane::DeploySearch",
+      "space f b": "tab_switcher::Toggle",
+
+      // LSP actions
+      "space r n": "editor::Rename",
+      "space c a": "editor::ToggleCodeActions",
+      "space e": "editor::Hover",
+      "space d n": "editor::GoToDiagnostic",
+      "space d p": "editor::GoToPreviousDiagnostic",
+
+      // Buffer management
+      "space b d": "pane::CloseActiveItem",
+      "space b b": "tab_switcher::Toggle",
+      "space b D": "pane::CloseOtherItems",
+
+      // Format
+      "space f m": "editor::Format",
+
+      // File explorer
+      "space p v": "workspace::ToggleRightDock",
+      "-": "workspace::ToggleRightDock",
+
+      // Open in Finder
+      "space shift-o": "editor::RevealInFileManager",
+
+      // Yank whole file
+      "ctrl-c": ["workspace::SendKeystrokes", "g g V G y"],
+
+      // Line movement
+      "cmd-j": "editor::MoveLineDown",
+      "cmd-k": "editor::MoveLineUp"
     }
   },
   {
     "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
     "bindings": {
       // visual, visual line & visual block modes
-      "g c": "editor::ToggleComments"
+      "g c": "editor::ToggleComments",
+
+      // Line movement
+      "cmd-j": "editor::MoveLineDown",
+      "cmd-k": "editor::MoveLineUp"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "ctrl-e": "editor::MoveToEndOfLine",
+      "ctrl-a": "editor::MoveToBeginningOfLine"
     }
   },
   {

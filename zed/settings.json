@@ -14,9 +14,9 @@
 		"color-highlight": false
 	},
 	"base_keymap": "VSCode",
-	"vim_mode": false,
+	"vim_mode": true,
 	"tab_size": 2,
-	"auto_indent": true,
+	"auto_indent": "syntax_aware",
 	"auto_signature_help": false,
 	"bottom_dock_layout": "contained",
 	"autosave": {
@@ -40,7 +40,10 @@
 	"cursor_shape": "block",
 
 	// --- Editor ---
-	"relative_line_numbers": "disabled",
+	"vertical_scroll_margin": 8,
+	"current_line_highlight": "line",
+	"show_whitespaces": "boundary",
+	"relative_line_numbers":"enabled",
 	"inline_code_actions": false,
 	"show_edit_predictions": false,
 	"edit_predictions": {
@@ -48,7 +51,7 @@
 		"mode": "subtle"
 	},
 	"gutter": {
-		"line_numbers": false,
+		"line_numbers": true,
 		"runnables": false,
 		"breakpoints": false,
 		"folds": false,
@@ -244,7 +247,6 @@
 	],
 	"context_servers": {
 		"posthog": {
-   "settings": {},
 
 			"enabled": true,
 			"url": "https://mcp.posthog.com/mcp",
