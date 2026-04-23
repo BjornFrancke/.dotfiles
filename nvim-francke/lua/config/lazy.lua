@@ -16,6 +16,9 @@ require("lazy").setup({
 		{ import = "plugins" },
 		"ayu-theme/ayu-vim",
 		{
+			"geigerzaehler/tree-sitter-jinja2",
+		},
+		{
 			"mason-org/mason.nvim",
 			opts = {},
 		},
@@ -67,16 +70,6 @@ require("lazy").setup({
 			"nicholasmata/nvim-dap-cs",
 			dependencies = { "mfussenegger/nvim-dap" },
 			opts = {},
-		},
-		{
-			"numToStr/Comment.nvim",
-			opts = {
-				pre_hook = function()
-					if vim.bo.filetype == "yaml.ansible" then
-						return "# %s"
-					end
-				end,
-			},
 		},
 		{
 			"nvim-treesitter/nvim-treesitter",

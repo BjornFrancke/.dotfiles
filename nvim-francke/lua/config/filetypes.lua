@@ -2,6 +2,9 @@ vim.filetype.add({
   extension = {
     http = "http",
     mjml = "mjml",
+    j2 = "jinja2",
+    jinja2 = "jinja2",
+    jinja = "jinja2",
   },
   pattern = {
     [".*/playbooks/.*%.ya?ml"] = "yaml.ansible",
@@ -10,6 +13,7 @@ vim.filetype.add({
     [".*/tasks/.*%.ya?ml"] = "yaml.ansible",
     [".*/group_vars/.*%.ya?ml"] = "yaml.ansible",
     [".*/host_vars/.*%.ya?ml"] = "yaml.ansible",
+    [".*/inventory/.*%.ya?ml"] = "yaml.ansible",
   },
 })
 
