@@ -127,6 +127,9 @@
     "https://json-schema.org/": true,
     "https://biomejs.dev": true,
     "https://turbo.build": true
-  }, 
+  },
+  "liveServer.settings.donotShowInfoMsg": true,
+  "chat.disableAIFeatures": true,
+  
 
 }
