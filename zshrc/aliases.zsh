@@ -11,6 +11,7 @@ alias note='echo "$(date +%F\ %R)  " >> ~/notes/'  # note quick-thought.txt
 alias g='grep --color=auto -nH '                 # base grep, line-nums + filename
 alias yd='yarn dev'
 alias bunfo='bun prettier --write "src/**/*.{ts,js}"'
+alias copyfile='pbcopy <'
 
 ##### Networking & ports #####
 alias speed='speedtest-cli' # Quickly test internet speed
