@@ -9,125 +9,14 @@
   {
     "context": "Workspace",
     "bindings": {
-      "shift shift": "file_finder::Toggle"
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
-      "j k": ["workspace::SendKeystrokes", "escape"]
-    }
-  },
-  {
-    "context": "vim_mode == normal && Editor",
-    "bindings": {
-      "g D": "editor::GoToDeclaration",
-      "g i": "editor::GoToImplementation"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
-    "bindings": {
-      "tab": "pane::ActivateNextItem",
-      "shift-tab": "pane::ActivatePreviousItem",
-
-      // Telescope equivalents
-      "space f f": "file_finder::Toggle",
-      "space f g": "pane::DeploySearch",
-      "space f b": "tab_switcher::Toggle",
-
-      // LSP actions
-      "space r n": "editor::Rename",
-      "space c a": "editor::ToggleCodeActions",
-      "space e": "editor::Hover",
-      "space d n": "editor::GoToDiagnostic",
-      "space d p": "editor::GoToPreviousDiagnostic",
-
-      // Buffer management
-      "space b d": "pane::CloseActiveItem",
-      "space b b": "tab_switcher::Toggle",
-      "space b D": "pane::CloseOtherItems",
-
-      // Format
-      "space f m": "editor::Format",
-
-      // File explorer
-      "space p v": "workspace::ToggleRightDock",
-      "-": "workspace::ToggleRightDock",
-
-      // Open in Finder
-      "space shift-o": "editor::RevealInFileManager",
-
-      // Yank whole file
-      "ctrl-c": ["workspace::SendKeystrokes", "g g V G y"],
-
-      // Line movement
-      "cmd-j": "editor::MoveLineDown",
-      "cmd-k": "editor::MoveLineUp"
-    }
-  },
-  {
-    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
-    "bindings": {
-      // visual, visual line & visual block modes
-      "g c": "editor::ToggleComments",
-
-      // Line movement
-      "cmd-j": "editor::MoveLineDown",
-      "cmd-k": "editor::MoveLineUp"
-    }
+      // "shift shift": "file_finder::Toggle"
+    },
   },
   {
     "context": "Editor && vim_mode == insert",
     "bindings": {
-      "ctrl-e": "editor::MoveToEndOfLine",
-      "ctrl-a": "editor::MoveToBeginningOfLine"
-    }
-  },
-  {
-    "context": "Pane",
-    "bindings": {
-      "cmd-1": ["pane::ActivateItem", 0],
-      "cmd-2": ["pane::ActivateItem", 1],
-      "cmd-3": ["pane::ActivateItem", 2],
-      "cmd-4": ["pane::ActivateItem", 3],
-      "cmd-5": ["pane::ActivateItem", 4],
-      "cmd-6": ["pane::ActivateItem", 5],
-      "cmd-7": ["pane::ActivateItem", 6],
-      "cmd-8": ["pane::ActivateItem", 7],
-      "cmd-9": ["pane::ActivateItem", 8],
-      "cmd-0": "pane::ActivateLastItem",
-      "cmd-k s": "pane::SplitRight"
-    }
-  },
-  {
-    "context": "Workspace",
-    "bindings": {
-      "cmd-1": ["workspace::ActivatePane", 0],
-      "cmd-2": ["workspace::ActivatePane", 1],
-      "cmd-3": ["workspace::ActivatePane", 2],
-      "cmd-4": ["workspace::ActivatePane", 3],
-      "cmd-5": ["workspace::ActivatePane", 4],
-      "cmd-6": ["workspace::ActivatePane", 5],
-      "cmd-7": ["workspace::ActivatePane", 6],
-      "cmd-8": ["workspace::ActivatePane", 7],
-      "cmd-9": ["workspace::ActivatePane", 8],
-      "cmd-k h": "workspace::ActivatePaneLeft",
-      "cmd-k j": "workspace::ActivatePaneDown",
-      "cmd-k k": "workspace::ActivatePaneUp",
-      "cmd-k l": "workspace::ActivatePaneRight",
-      "cmd-b": "workspace::ToggleRightDock"
-    }
-  },
-  {
-    "context": "ProjectPanel",
-    "bindings": {
-      "cmd-.": "project_panel::NewFile",
-      "cmd-,": "project_panel::NewDirectory",
-      "f2": "project_panel::Rename",
-      "cmd-shift-c": "workspace::CopyPath",
-      "enter": "project_panel::Open"
-    }
+      // "j k": "vim::NormalBefore"
+    },
   },
   {
     "context": "Editor",
@@ -136,14 +25,45 @@
     }
   },
   {
+    "context": "Editor",
+    "unbind": {
+      "cmd-shift-i": "editor::Format"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-alt-cmd-!": "editor::Rename"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "f2": "editor::Rename"
+    }
+  },
+  {
+    "context": "Workspace && !Pane",
     "bindings": {
       "cmd-shift-g": "git_panel::ToggleFocus"
     }
   },
   {
     "context": "Workspace",
+    "unbind": {
+      "ctrl-shift-g": "git_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Editor",
     "bindings": {
-      "alt-cmd-b": "workspace::ToggleLeftDock"
+      "ctrl-alt-cmd-\"": "editor::ToggleBlockComments"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "cmd-k cmd-´": "editor::ToggleBlockComments"
     }
   }
 ]

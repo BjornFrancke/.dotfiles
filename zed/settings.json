@@ -6,253 +6,150 @@
 // To see all of Zed's default settings without changing your
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
-
 {
-	"helix_mode": false,
-	// --- Core ---
-	"auto_update_extensions": {
-		"color-highlight": false
-	},
-	"base_keymap": "VSCode",
-	"vim_mode": true,
-	"tab_size": 2,
-	"auto_indent": "syntax_aware",
-	"auto_signature_help": false,
-	"bottom_dock_layout": "contained",
-	"autosave": {
-		"after_delay": {
-			"milliseconds": 1000
-		}
-	},
-	"restore_on_startup": "launchpad",
-	"close_on_file_delete": true,
-
-	// --- Appearance ---
-	"theme": "Ayu Darker",
-	"icon_theme": "Material Icon Theme",
-	"ui_font_family": "JetBrainsMono Nerd Font Mono",
-	"ui_font_size": 12.0,
-	"buffer_font_family": "JetBrainsMono Nerd Font Mono",
-	"buffer_font_size": 12,
-	"buffer_font_weight": 400.0,
-	"unnecessary_code_fade": 0.3,
-	"cursor_blink": true,
-	"cursor_shape": "block",
-
-	// --- Editor ---
-	"vertical_scroll_margin": 8,
-	"current_line_highlight": "line",
-	"show_whitespaces": "boundary",
-	"relative_line_numbers":"enabled",
-	"inline_code_actions": false,
-	"show_edit_predictions": false,
-	"edit_predictions": {
-		"provider": "zed",
-		"mode": "subtle"
-	},
-	"gutter": {
-		"line_numbers": true,
-		"runnables": false,
-		"breakpoints": false,
-		"folds": false,
-		"min_line_number_digits": 4
-	},
-	"indent_guides": {
-		"enabled": true,
-		"coloring": "indent_aware",
-		"line_width": 3,
-		"background_coloring": "disabled"
-	},
-	"inlay_hints": {
-		"enabled": true,
-		"show_background": false,
-		"show_parameter_hints": true,
-		"show_other_hints": false,
-		"show_type_hints": false,
-		"show_value_hints": false
-	},
-	"colorize_brackets": true,
-
-	// --- Tabs ---
-	"max_tabs": 6,
-	"tab_bar": {
-		"show": false,
-		"show_pinned_tabs_in_separate_row": false,
-		"show_nav_history_buttons": false,
-		"show_tab_bar_buttons": false
-	},
-	"tabs": {
-		"show_diagnostics": "off",
-		"show_close_button": "hidden",
-		"file_icons": true,
-		"git_status": false
-	},
-	"preview_tabs": {
-		"enable_preview_from_file_finder": true
-	},
-
-	// --- Title Bar / Toolbar / Status Bar ---
-	"title_bar": {
-		"show_project_items": true,
-		"show_branch_icon": false,
-		"show_user_picture": false,
-		"show_onboarding_banner": false,
-		"show_menus": false,
-		"show_sign_in": false
-	},
-	"toolbar": {
-		"selections_menu": false,
-		"agent_review": false,
-		"quick_actions": false
-	},
-	"status_bar": {
-		"cursor_position_button": false
-	},
-	// Line indicator format: "short" = "2 s, 15 l, 32 c" | "long" = "2 selections, 15 lines, 32 characters"
-	"line_indicator_format": "short",
-
-	// --- Panels ---
-	"project_panel": {
-		"dock": "right",
-		"button": false,
-		"default_width": 230.0,
-		"bold_folder_labels": true,
-		"git_status": true,
-		"indent_size": 13.0,
-		"indent_guides": { "show": "always" },
-		"sticky_scroll": true,
-		"entry_spacing": "standard",
-		"scrollbar": { "show": "never" },
-		"hide_root": true,
-		"auto_fold_dirs": true
-	},
-	"outline_panel": {
-		"button": true,
-		"folder_icons": true,
-		"file_icons": true,
-		"indent_guides": { "show": "always" }
-	},
-	"git_panel": {
-		"dock": "right",
-		"button": true,
-		"default_width": 300.0,
-		"tree_view": true
-	},
-	"notification_panel": {
-		"dock": "left",
-		"button": false
-	},
-	"collaboration_panel": {
-		"button": false
-	},
-	"search": {
-		"button": false
-	},
-	"file_finder": {
-		"file_icons": true,
-		"modal_max_width": "medium"
-	},
-
-	// --- Git ---
-	"git": {
-		"disable_git": false,
-		"blame": {
-			"show_avatar": false
-		}
-	},
-
-	// --- Agent & AI ---
-	"agent": {
-		"inline_assistant_model": {
-   "provider": "openai",
-   "model": "gpt-5.3-codex",
-   "enable_thinking": false
+  "proxy": "",
+  "diff_view_style": "unified",
+  "prettier": {
+    "allowed": true
   },
-  "dock": "right",
-		"default_profile": "write",
-		"default_model": {
-			"provider": "zed.dev",
-			"model": "claude-sonnet-4-5"
-		},
-		"commit_message_model": {
-			"provider": "openai",
-			"model": "gpt-4o-mini"
-		}
-	},
-	"agent_servers": {
-		"claude-acp": {
-   "type": "registry"
+  "diagnostics": {
+    "inline": {
+      "enabled": false
+    }
   },
-  "opencode": {
-			"type": "registry"
-		},
-		"w": {
-			"type": "custom",
-			"command": "path_to_executable",
-			"args": [],
-			"env": {}
-		}
-	},
-	"agent_ui_font_size": 12.0,
-
-	// --- Terminal / Debugger / Diagnostics ---
-	"terminal": {
-		"button": false
-	},
-	"debugger": {
-		"button": false
-	},
-	"diagnostics": {
-		"button": true
-	},
-	"which_key": {
-		"enabled": true
-	},
-
-	// --- Languages ---
-	"languages": {
-		"JavaScript": { "formatter": { "language_server": { "name": "biome" } } },
-		"TypeScript": { "formatter": { "language_server": { "name": "biome" } } },
-		"TSX": { "formatter": { "language_server": { "name": "biome" } } },
-		"JSON": { "formatter": { "language_server": { "name": "biome" } } },
-		"JSONC": { "formatter": { "language_server": { "name": "biome" } } },
-		"CSS": { "formatter": { "language_server": { "name": "biome" } } }
-	},
-
-	// --- LSP ---
-	"lsp": {
-		"biome": {
-			"binary": {
-				"path": "/opt/homebrew/bin/biome",
-				"arguments": ["lsp-proxy"]
-			},
-			"settings": {
-				"require_config_file": true
-			}
-		}
-	},
-
-	// --- File Exclusions ---
-	"file_scan_exclusions": [
-		"**/.git",
-		"**/.svn",
-		"**/.hg",
-		"**/CVS",
-		"**/.DS_Store",
-		"**/Thumbs.db",
-		"**/.classpath",
-		"**/.settings",
-		"**/dist",
-		"**/.vscode"
-	],
-	"context_servers": {
-		"posthog": {
-
-			"enabled": true,
-			"url": "https://mcp.posthog.com/mcp",
-			"headers": {
-				"Authorization": "Bearer undefined"
-			}
-		}
-	}
+  "colorize_brackets": true,
+  "vim": {
+    "use_smartcase_find": true,
+    "cursor_shape": {
+      "insert": "bar"
+    },
+    "toggle_relative_line_numbers": true
+  },
+  "agent": {
+    "button": false,
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "search": {
+    "button": false
+  },
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        }
+      },
+      "enable_lsp_tasks": true
+    }
+  },
+  "buffer_line_height": {
+    "custom": 1.5180000066757202
+  },
+  "buffer_font_weight": 400.0,
+  "project_panel": {
+    "bold_folder_labels": true,
+    "indent_size": 18.0
+  },
+  "active_pane_modifiers": {
+    "border_size": 0.0
+  },
+  "zoomed_padding": true,
+  "toolbar": {
+    "breadcrumbs": true
+  },
+  "agent_ui_font_size": 14.0,
+  "title_bar": {
+    "show_onboarding_banner": false,
+    "button_layout": "platform_default",
+    "show_user_picture": false,
+    "show_user_menu": false
+  },
+  "show_edit_predictions": true,
+  "edit_predictions": {
+    "allow_data_collection": "no",
+    "mode": "subtle"
+  },
+  "code_lens": "off",
+  "lsp_document_colors": "inlay",
+  "inlay_hints": {
+    "show_background": false,
+    "show_other_hints": false,
+    "show_value_hints": false,
+    "show_type_hints": false,
+    "enabled": true
+  },
+  "ui_font_family": "JetBrainsMono Nerd Font Mono",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+    "anthropic_retention": false
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    }
+  },
+  "terminal": {
+    "env": {
+      "FIG_NEW_SESSION": "\"1\""
+    },
+    "font_family": "JetBrainsMono Nerd Font Mono"
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "tab_bar": {
+    "show": false
+  },
+  "sticky_scroll": {
+    "enabled": false
+  },
+  "gutter": {
+    "min_line_number_digits": 3,
+    "bookmarks": false,
+    "breakpoints": false,
+    "runnables": false,
+    "folds": false
+  },
+  "minimap": {
+    "show": "never"
+  },
+  "scrollbar": {
+    "axes": {
+      "horizontal": false
+    }
+  },
+  "cursor_shape": "block",
+  "cursor_blink": true,
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "linked_edits": true,
+  "indent_guides": {
+    "line_width": 1,
+    "active_line_width": 3,
+    "background_coloring": "disabled",
+    "coloring": "indent_aware",
+    "enabled": true
+  },
+  "base_keymap": "VSCode",
+  "ui_font_size": 13.0,
+  "buffer_font_size": 14.0,
+  "theme": "Ayu Darker",
 }
