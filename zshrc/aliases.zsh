@@ -31,6 +31,7 @@ alias sidepanel='env YAZI_CONFIG_HOME=~/.config/yazelix/yazi/sidebar yazi'
 alias dcom='docker-compose'
 alias dps='docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
 alias dreload='docker compose up -d --build --no-deps' # Builds and swap image -> append with service-name
+alias dcnuke='docker compose down -v'
 
 ##### Drizzle kit ####
 alias dkgen='bun drizzle-kit generate'

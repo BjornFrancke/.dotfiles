@@ -26,4 +26,5 @@ path=(
 )
 
 # Yarn global bin (evaluated at runtime)
-export PATH="$(yarn global bin):$PATH"
+#export PATH="$(yarn global bin):$PATH"
+export AWS_PROFILE=onomondo
