@@ -13,7 +13,7 @@
   "editor.fontWeight": "normal",
   "prettier.bracketSameLine": true,
   "[typescript]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "git.confirmSync": false,
   "indentRainbow.indicatorStyle": "light",
@@ -25,16 +25,16 @@
     "editor.formatOnType": true
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -50,7 +50,6 @@
     "strings": "on"
   },
   "workbench.sideBar.location": "right",
-  "editor.mouseWheelZoom": true,
   "workbench.fontAliasing": "auto",
   "workbench.editorAssociations": {
     "*.svg": "default"
@@ -130,6 +129,16 @@
   },
   "liveServer.settings.donotShowInfoMsg": true,
   "chat.disableAIFeatures": true,
+  "git.blame.editorDecoration.enabled": false,
+  "todo-tree.ripgrep.ripgrep": "/opt/homebrew/bin/rg",
+  "scm.repositories.selectionMode": "single",
+  "telemetry.feedback.enabled": false,
+  "workbench.settings.alwaysShowAdvancedSettings": true,
+  "js/ts.inlayHints.parameterNames.enabled": "all",
+  "html.completion.attributeDefaultValue": "singlequotes",
+  "workbench.activityBar.compact": true,
+  "js/ts.inlayHints.variableTypes.enabled": true,
+  "workbench.settings.useSplitJSON": true,
   
 
 }
