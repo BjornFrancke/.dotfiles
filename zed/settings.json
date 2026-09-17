@@ -8,7 +8,7 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "proxy": "",
-  "diff_view_style": "unified",
+  "diff_view_style": "split",
   "prettier": {
     "allowed": true
   },
@@ -86,7 +86,7 @@
     "show_background": false,
     "show_other_hints": false,
     "show_value_hints": false,
-    "show_type_hints": false,
+    "show_type_hints": true,
     "enabled": true
   },
   "ui_font_family": "JetBrainsMono Nerd Font Mono",
