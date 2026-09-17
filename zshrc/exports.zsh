@@ -10,10 +10,6 @@ export NVM_DIR="$HOME/.nvm"
 # Dprint (formatting)
 export DPRINT_INSTALL="$HOME/.dprint"
 
-# Herd PHP configurations
-export HERD_PHP_84_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/84/"
-export HERD_PHP_82_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/82/"
-export HERD_PHP_74_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/74/"
 
 # PATH configuration
 # Using typeset -U to remove duplicates

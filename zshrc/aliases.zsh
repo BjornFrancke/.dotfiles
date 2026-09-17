@@ -53,3 +53,8 @@ alias ffd='fastfetch -c ~/.config/fastfetch/presets/dev.jsonc'
 
 # Fancy
 alias lzd='lazydocker'
+
+
+
+# Onomondo
+alias aws-login='aws sso login --profile onomondo'

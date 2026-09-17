@@ -1,15 +1,4 @@
-# Enable Powerlevel10k instant prompt (keep at top)
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-# Oh My Zsh
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
-plugins=(git macos)
-source $ZSH/oh-my-zsh.sh
-
-# Banner
+# Banner (must run before instant prompt preamble to avoid p10k console-output warning)
 echo "
  _____  ____    ____  ____     __  __  _    ___
 |     ||    \\  /    T|    \\   /  ]|  l/ ]  /  _]
@@ -19,6 +8,17 @@ echo "
 |  T   |  .  Y|  |  ||  |  \\     ||  .  ||     T
 l__j   l__j\\_jl__j__jl__j__j\\____jl__j\\_jl_____j
 "
+
+# Enable Powerlevel10k instant prompt (keep at top)
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Oh My Zsh
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git macos gh)
+source $ZSH/oh-my-zsh.sh
 
 # Source modular config files
 source ~/dotfiles/zshrc/exports.zsh
@@ -51,3 +51,8 @@ fi
 
 # Machine-specific config (not tracked in git)
 [[ -f ~/dotfiles/zshrc/local.zsh ]] && source ~/dotfiles/zshrc/local.zsh
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+export PATH="$HOME/.local/bin:$PATH"

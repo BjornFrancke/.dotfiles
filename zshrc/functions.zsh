@@ -52,3 +52,7 @@ killport() {
 gclone() {
     git clone "$1" && cd "$(basename "$1" .git)"
 }
+
+gather_facts() {
+    ansible all -m gather_facts -i inventories/$1
+}

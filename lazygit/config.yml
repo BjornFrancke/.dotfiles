@@ -13,6 +13,43 @@ gui:
     "refactor": "#41A9A0"
     "feat": "#a6da95"
     "production": "#4CFF64"
+  theme:
+    activeBorderColor:
+      - "#5CCFE6"
+      - bold
+    inactiveBorderColor:
+      - "#1F2430"
+    searchingActiveBorderColor:
+      - "#FFCC66"
+      - bold
+    optionsTextColor:
+      - "#6C7380"
+    selectedLineBgColor:
+      - "#1F2430"
+    inactiveViewSelectedLineBgColor:
+      - bold
+    cherryPickedCommitFgColor:
+      - "#0F131A"
+    cherryPickedCommitBgColor:
+      - "#5CCFE6"
+    markedBaseCommitFgColor:
+      - "#0F131A"
+    markedBaseCommitBgColor:
+      - "#FFCC66"
+    unstagedChangesColor:
+      - "#F07178"
+    defaultFgColor:
+      - "#CCCAC2"
 git:
-  pagers:
-    - pager: delta --dark --paging=never
+  diffRenderers:
+    - command: delta --dark --paging=never
+customCommands:
+  - key: '<c-u>'
+    context: 'commits'
+    command: 'git reset --soft HEAD^'
+    description: 'Undo last commit, keep changes staged'
+  - key: 'V'
+    context: 'localBranches'
+    command: 'gh pr checks {{.SelectedLocalBranch.Name}}'
+    output: terminal
+    description: "View current branch's PR checks"
