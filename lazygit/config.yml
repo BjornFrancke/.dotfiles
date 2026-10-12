@@ -6,13 +6,6 @@ gui:
   sidePanelWidth: 0.3333
   expandFocusedSidePanel: false
   mainPanelSplitMode: flexible
-  branchColors:
-    "release": "#eed49f"
-    "hotfix": "#ed8796"
-    "fix": "#ffb454"
-    "refactor": "#41A9A0"
-    "feat": "#a6da95"
-    "production": "#4CFF64"
   theme:
     activeBorderColor:
       - "#5CCFE6"
@@ -40,6 +33,13 @@ gui:
       - "#F07178"
     defaultFgColor:
       - "#CCCAC2"
+    branchColorPatterns:
+      "^release(/|$)": "#eed49f"
+      "^hotfix(/|$)": "#ed8796"
+      "^fix(/|$)": "#ffb454"
+      "^refactor(/|$)": "#41A9A0"
+      "^feat(/|$)": "#a6da95"
+      "^production(/|$)": "#4CFF64"
 git:
   diffRenderers:
     - command: delta --dark --paging=never
