@@ -14,15 +14,13 @@ SYMLINKS=(
     "nvim:~/.config/nvim"
     "helix:~/.config/helix"
     "zed:~/.config/zed"
-    "cursor:~/.config/cursor"
 
     # Terminal multiplexers
     "tmux/tmux.conf:~/.tmux.conf"
     "zellij:~/.config/zellij"
 
     # Terminal emulators
-    "ghostty/config:~/Library/Application Support/com.mitchellh.ghostty/config"
-    "iterm/com.googlecode.iterm2.plist:~/Library/Preferences/com.googlecode.iterm2.plist"
+    "ghostty/config.ghostty:~/Library/Application Support/com.mitchellh.ghostty/config.ghostty"
 
     # Shell
     "zshrc/.zshrc:~/.zshrc"
@@ -33,4 +31,5 @@ SYMLINKS=(
     "yazi:~/.config/yazi"
     "lazygit/config.yml:~/Library/Application Support/lazygit/config.yml"
     "karabiner:~/.config/karabiner"
+    "ripgrep/ripgreprc:~/.ripgreprc"
 )
