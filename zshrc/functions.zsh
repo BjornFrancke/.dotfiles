@@ -1,5 +1,7 @@
 # Shell functions
 
+source ~/dotfiles/zshrc/functions/lazyworktree.zsh
+
 # Make directory and enter it
 mdd() {
     mkdir -p "$1" && cd "$1"
