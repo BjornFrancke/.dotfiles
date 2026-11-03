@@ -91,4 +91,4 @@ for mapping in "${SYMLINKS[@]}"; do
 done
 
 echo ""
-echo -e "${GREEN}Done!${NC} Run 'dotfiles health' to verify."
+echo -e "${GREEN}Done!${NC} Run scripts/health-check.sh to verify."

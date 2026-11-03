@@ -1,0 +1,47 @@
+# Shared git config (symlinked to ~/.gitconfig).
+# Machine/identity-specific values (e.g. work email) live in ~/.gitconfig.local.
+
+[include]
+	path = ~/.gitconfig.local
+
+[user]
+	name = Bjorn Francke
+
+[core]
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true # use n and N to move between diff sections
+	dark = true
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+
+[rerere]
+	enabled = true
+
+[diff]
+	algorithm = histogram
+	tool = meld
+
+[merge]
+	conflictstyle = zdiff3
+	tool = meld
+
+[difftool]
+	prompt = false
+
+[difftool "meld"]
+	cmd = meld "$LOCAL" "$REMOTE"
+
+[mergetool]
+	keepBackup = false
+
+[mergetool "meld"]
+	cmd = meld \"$LOCAL\" \"$MERGED\" \"$REMOTE\" --output \"$MERGED\"

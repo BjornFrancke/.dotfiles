@@ -1,31 +1,26 @@
 # Basic
 alias brewup='brew update && brew upgrade'
 alias lg='lazygit'
-alias lc='colorls -lA --sd' 
-alias lcg='colorls --gs -t'
 alias c='clear'
 alias zshconfig='code ~/.zshrc'
 alias p10color='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done'
 alias y='yarn'
 alias note='echo "$(date +%F\ %R)  " >> ~/notes/'  # note quick-thought.txt
-alias g='grep --color=auto -nH '                 # base grep, line-nums + filename
+alias g='rg --line-number --heading'            # ripgrep: recursive, gitignore-aware
 alias yd='yarn dev'
 alias bunfo='bun prettier --write "src/**/*.{ts,js}"'
 alias copyfile='pbcopy <'
 
 ##### Networking & ports #####
-alias speed='speedtest-cli' # Quickly test internet speed
 alias myip='curl http://ipecho.net/plain; echo' # Get public ip
 alias ports='lsof -nP -iTCP -sTCP:LISTEN'  # see open TCP ports
 
 alias nvim='NVIM_APPNAME=nvim-francke nvim'
+# alias nvim='NVIM_APPNAME=nvim-francke-2 nvim'
 alias vim='nvim'
 alias e='$EDITOR'
 ##### Zellij #####
 alias ze='zellij -l welcome'
-alias yaze='zellij -l welcome --config-dir ~/.config/yazelix/zellij options --layout-dir ~/.config/yazelix/zellij/layout'
-alias yase='nu -c "zellij -l welcome --config-dir ~/.config/yazelix/zellij options --layout-dir ~/.config/yazelix/zellij/layouts"'
-alias sidepanel='env YAZI_CONFIG_HOME=~/.config/yazelix/yazi/sidebar yazi'
 
 ##### Docker / Containers ####
 alias dcom='docker-compose'
@@ -46,11 +41,6 @@ alias emptytrash='rm -rf ~/.Trash/*' # purge macOS Trash
 
 alias -s ts=nvim
 alias -s js=nvim
-
-##### Fastfetch #####
-alias ff='fastfetch'
-alias ffm='fastfetch -c ~/.config/fastfetch/presets/minimal.jsonc'
-alias ffd='fastfetch -c ~/.config/fastfetch/presets/dev.jsonc'
 
 # Fancy
 alias lzd='lazydocker'

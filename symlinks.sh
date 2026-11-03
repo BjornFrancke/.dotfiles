@@ -11,13 +11,13 @@
 
 SYMLINKS=(
     # Editors
-    "nvim:~/.config/nvim"
+    "nvim-francke:~/.config/nvim-francke"
     "helix:~/.config/helix"
     "zed:~/.config/zed"
 
     # Terminal multiplexers
     "tmux/tmux.conf:~/.tmux.conf"
-    "zellij:~/.config/zellij"
+    # "zellij:~/.config/zellij"
 
     # Terminal emulators
     "ghostty/config.ghostty:~/Library/Application Support/com.mitchellh.ghostty/config.ghostty"
@@ -27,9 +27,11 @@ SYMLINKS=(
     "p10k/.p10k.zsh:~/.p10k.zsh"
 
     # Tools
-    "fastfetch:~/.config/fastfetch"
-    "yazi:~/.config/yazi"
+    # "fastfetch:~/.config/fastfetch"
+    # "yazi:~/.config/yazi"
     "lazygit/config.yml:~/Library/Application Support/lazygit/config.yml"
     "karabiner:~/.config/karabiner"
     "ripgrep/ripgreprc:~/.ripgreprc"
+    "mise:~/.config/mise"
+    "git/config:~/.gitconfig"
 )

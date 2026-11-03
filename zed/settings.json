@@ -77,6 +77,7 @@
   },
   "show_edit_predictions": true,
   "edit_predictions": {
+    "provider": "zed",
     "allow_data_collection": "no",
     "mode": "subtle"
   },

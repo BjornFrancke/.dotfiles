@@ -10,6 +10,9 @@ export VISUAL='nvim'
 # Dprint (formatting)
 export DPRINT_INSTALL="$HOME/.dprint"
 
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+
 
 # PATH configuration
 # Using typeset -U to remove duplicates
@@ -19,6 +22,7 @@ path=(
     "$HOME/.local/bin"
     "$HOME/.yarn/bin"
     "$HOME/.config/yarn/global/node_modules/.bin"
+    "$PNPM_HOME/bin"
     "$HOME/Go/bin"
     "$DPRINT_INSTALL/bin"
     "/opt/homebrew/opt/ruby/bin"
