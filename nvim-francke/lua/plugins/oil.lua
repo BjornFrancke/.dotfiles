@@ -6,8 +6,8 @@ return {
 			{ "nvim-mini/mini.icons", opts = {} },
 		},
 		keys = {
-			{ "-", "<cmd>Oil --float<cr>" },
-			{ "<leader>pv", "<cmd>Oil<cr>" },
+			{ "-", "<cmd>Oil --float<cr>", desc = "Oil (float)" },
+			{ "<leader>pv", "<cmd>Oil<cr>", desc = "Oil (file explorer)" },
 		},
 		opts = {
 			default_file_explorer = true,

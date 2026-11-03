@@ -79,7 +79,7 @@ return {
 		vim.keymap.set("n", "<leader>br", "<cmd>BufferCloseBuffersRight<CR>", { desc = "Close buffers to the right" })
 		vim.keymap.set("n", "<leader>bl", "<cmd>BufferCloseBuffersLeft<CR>", { desc = "Close buffers to the left" })
 		vim.keymap.set("n", "<leader>bD", "<cmd>BufferCloseAllButCurrent<CR>", { desc = "Close all but current" })
-		vim.keymap.set("n", "<leader>bp", "<cmd>BufferPin<CR>", { desc = "Pin buffer" })
+		vim.keymap.set("n", "<leader>bP", "<cmd>BufferPin<CR>", { desc = "Pin buffer" })
 
 		-- Derive barbar colors from active colorscheme highlight groups
 		local function get_hl_color(group, attr)

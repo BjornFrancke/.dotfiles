@@ -10,25 +10,25 @@ end
 M.on_attach = function(client, bufnr)
 	client.server_capabilities.documentFormattingProvider = false
 	client.server_capabilities.documentRangeFormattingProvider = false
-	local map = function(mode, lhs, rhs)
-		vim.keymap.set(mode, lhs, rhs, { buffer = bufnr, silent = true })
+	local map = function(mode, lhs, rhs, desc)
+		vim.keymap.set(mode, lhs, rhs, { buffer = bufnr, silent = true, desc = desc })
 	end
 
 	-- Navigation
-	map("n", "gd", vim.lsp.buf.definition)
-	map("n", "gr", vim.lsp.buf.references)
-	map("n", "gD", vim.lsp.buf.declaration)
-	map("n", "gi", vim.lsp.buf.implementation)
-	map("n", "K", vim.lsp.buf.hover)
+	map("n", "gd", vim.lsp.buf.definition, "Go to definition")
+	map("n", "gr", require("telescope.builtin").lsp_references, "References")
+	map("n", "gD", vim.lsp.buf.declaration, "Go to declaration")
+	map("n", "gi", require("telescope.builtin").lsp_implementations, "Go to implementation")
+	map("n", "K", vim.lsp.buf.hover, "Hover docs")
 
 	-- Actions
-	map("n", "<leader>rn", vim.lsp.buf.rename)
-	map("n", "<leader>ca", vim.lsp.buf.code_action)
+	map("n", "<leader>rn", vim.lsp.buf.rename, "Rename symbol")
+	map("n", "<leader>ca", vim.lsp.buf.code_action, "Code action")
 
 	-- Diagnostics
-	map("n", "<leader>e", vim.diagnostic.open_float)
-	map("n", "<leader>dn", vim.diagnostic.goto_next)
-	map("n", "<leader>dp", vim.diagnostic.goto_prev)
+	map("n", "<leader>e", vim.diagnostic.open_float, "Show diagnostic")
+	map("n", "<leader>dn", vim.diagnostic.goto_next, "Next diagnostic")
+	map("n", "<leader>dp", vim.diagnostic.goto_prev, "Previous diagnostic")
 
 	-- Format
 	-- map("n", "<leader>fm", function()

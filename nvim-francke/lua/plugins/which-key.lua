@@ -25,10 +25,11 @@ return {
 			-- Find operations
 			{ "<leader>f", group = "[F]ind (Telescope)" },
 
-			-- Go to
-			{ "<leader>g", group = "[G]o to" },
-			{ "<leader>gd", desc = "[G]o to [d]efinition" },
-			{ "<leader>gD", desc = "[G]o to [D]eclaration" },
+						{ "<leader>b", group = "[B]uffers" },
+			{ "<leader>d", group = "[D]iagnostics / debug" },
+			{ "<leader>r", group = "[R]ename" },
+			{ "<leader>c", group = "[C]ode" },
+			{ "<leader>p", group = "[P]roject" },
 		})
 	end,
 }

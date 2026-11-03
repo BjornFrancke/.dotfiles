@@ -9,7 +9,7 @@ vim.g.mapleader = " "
 -- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, defaults)
 
 -- Yank whole file
-vim.keymap.set("n", "<C-c>", "<cmd> %y+ <CR>", defaults)
+vim.keymap.set("n", "<C-c>", "<cmd> %y+ <CR>", vim.tbl_extend("force", defaults, { desc = "Yank whole file" }))
 
 -- Move single-line
 vim.keymap.set("n", "<D-j>", ":move .+1<CR>==", defaults)

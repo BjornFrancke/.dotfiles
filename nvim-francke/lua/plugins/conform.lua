@@ -34,6 +34,7 @@ return {
 	keys = {
 		{
 			"<leader>fm",
+			desc = "[F]or[m]at buffer",
 			function()
 				require("conform").format({
 					async = true,
