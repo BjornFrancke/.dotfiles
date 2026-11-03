@@ -56,3 +56,19 @@ gclone() {
 gather_facts() {
     ansible all -m gather_facts -i inventories/$1
 }
+
+# Interactive live ripgrep via fzf; enter opens match in $EDITOR
+rgf() {
+    local RG='rg --column --line-number --no-heading --color=always --smart-case'
+    fzf --ansi --disabled --query "${*:-}" \
+        --bind "start:reload:$RG {q} || true" \
+        --bind "change:reload:sleep 0.1; $RG {q} || true" \
+        --delimiter : \
+        --preview 'bat --color=always {1} --highlight-line {2}' \
+        --preview-window 'right,60%,+{2}+3/3,~3' \
+        --bind 'enter:become(${EDITOR:-nvim} {1} +{2})'
+}
+
+jt() {
+    worktree_jump $(git rev-parse --show-toplevel) "$@";
+}
