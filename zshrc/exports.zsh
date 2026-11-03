@@ -16,6 +16,9 @@ export DPRINT_INSTALL="$HOME/.dprint"
 typeset -U path
 
 path=(
+    "$HOME/.local/bin"
+    "$HOME/.yarn/bin"
+    "$HOME/.config/yarn/global/node_modules/.bin"
     "$HOME/Go/bin"
     "$DPRINT_INSTALL/bin"
     "/opt/homebrew/opt/ruby/bin"
@@ -25,8 +28,6 @@ path=(
     $path
 )
 
-# Yarn global bin (evaluated at runtime)
-#export PATH="$(yarn global bin):$PATH"
 export AWS_PROFILE=onomondo
 
 # Ripgrep / fzf

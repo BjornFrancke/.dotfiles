@@ -14,6 +14,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Homebrew (skips the fork if a login shell already ran shellenv)
+[[ -z $HOMEBREW_PREFIX ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Oh My Zsh
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
@@ -27,15 +30,16 @@ source ~/dotfiles/zshrc/functions.zsh
 source ~/dotfiles/zshrc/history.zsh
 
 # Powerlevel10k
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+source $HOMEBREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 # Zsh plugins
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# iTerm2 integration
-# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# fzf (Ctrl-R history, Ctrl-T files, Alt-C cd)
+source <(fzf --zsh)
 
 # NVM
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -51,8 +55,3 @@ fi
 
 # Machine-specific config (not tracked in git)
 [[ -f ~/dotfiles/zshrc/local.zsh ]] && source ~/dotfiles/zshrc/local.zsh
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-export PATH="$HOME/.local/bin:$PATH"
