@@ -5,7 +5,7 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 
 # NVM
-export NVM_DIR="$HOME/.nvm"
+#export NVM_DIR="$HOME/.nvm"
 
 # Dprint (formatting)
 export DPRINT_INSTALL="$HOME/.dprint"
