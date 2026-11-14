@@ -45,7 +45,5 @@ alias -s js=nvim
 # Fancy
 alias lzd='lazydocker'
 
-
-
-# Onomondo
-alias aws-login='aws sso login --profile onomondo'
+# SSH: remote hosts often lack tmux-256color/xterm-ghostty terminfo
+alias ssh='TERM=xterm-256color ssh'
