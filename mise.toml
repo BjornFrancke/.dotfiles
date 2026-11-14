@@ -1,0 +1,41 @@
+# TRIAL: mirrors symlinks.sh so `mise dot status/diff` can be compared against it.
+# Not used for anything yet; symlinks.sh + scripts/install.sh remain the real thing.
+# Sources are relative to this file. Default mode is symlink.
+
+[dotfiles]
+# Editors
+"~/.config/nvim-francke" = { source = "nvim-francke" }
+"~/.config/helix" = { source = "helix" }
+"~/.config/zed" = { source = "zed" }
+
+# Terminal
+"~/.tmux.conf" = { source = "tmux/tmux.conf" }
+"~/Library/Application Support/com.mitchellh.ghostty/config.ghostty" = { source = "ghostty/config.ghostty" }
+
+# Shell
+"~/.zshrc" = { source = "zshrc/.zshrc" }
+"~/.p10k.zsh" = { source = "p10k/.p10k.zsh" }
+"~/.config/starship.toml" = { source = "starship/starship.toml"}
+
+# Tools
+"~/Library/Application Support/lazygit/config.yml" = { source = "lazygit/config.yml" }
+#"~/.config/karabiner" = { source = "karabiner" }
+"~/.ripgreprc" = { source = "ripgrep/ripgreprc" }
+"~/.config/mise" = { source = "mise" }
+"~/.gitconfig" = { source = "git/config" }
+
+# --- macOS defaults trial: the three settings from scripts/macos.sh ---
+[bootstrap.macos.finder]
+preferred_view_style = "list"          # FXPreferredViewStyle = Nlsv
+
+[bootstrap.macos.dock]
+autohide = true
+autohide_delay = 0.0
+autohide_time_modifier = 0.35
+
+[bootstrap.macos.defaults]
+NSGlobalDomain = { AppleEnableSwipeNavigateWithScrolls = false }
+kCFPreferencesAnyApplication = { TSMLanguageIndicatorEnabled = 0 }
+
+[bootstrap.hooks]
+post-defaults = "killall Dock || true"

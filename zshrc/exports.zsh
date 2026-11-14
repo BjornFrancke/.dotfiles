@@ -20,6 +20,7 @@ typeset -U path
 
 path=(
     "$HOME/.local/bin"
+    "$HOME/.local/share/mise/shims"   # so tmux popups, git hooks, GUI apps find mise tools without the prompt hook
     "$HOME/.yarn/bin"
     "$HOME/.config/yarn/global/node_modules/.bin"
     "$PNPM_HOME/bin"
