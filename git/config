@@ -16,6 +16,11 @@
 [delta]
 	navigate = true # use n and N to move between diff sections
 	dark = true
+	line-numbers = true
+	syntax-theme = ansi
+
+[diff]
+    colorMoved = default
 
 [pull]
 	rebase = true
