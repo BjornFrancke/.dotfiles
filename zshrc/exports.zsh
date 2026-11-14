@@ -38,3 +38,9 @@ export AWS_PROFILE=onomondo
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# fzf + bat: Ayu Dark palette (matches tmux, lazygit, ghostty)
+export FZF_DEFAULT_OPTS="--height=40% --layout=reverse --border=rounded --info=inline-right \
+  --color=bg:#0F131A,bg+:#1F2430,fg:#CCCAC2,fg+:#CCCAC2,hl:#5CCFE6,hl+:#5CCFE6 \
+  --color=border:#1F2430,prompt:#5CCFE6,pointer:#FFCC66,marker:#FFCC66,spinner:#5CCFE6,info:#6C7380,header:#6C7380,gutter:#0F131A"
+export BAT_THEME=ansi   # ansi = use the terminal's (Ayu) palette
