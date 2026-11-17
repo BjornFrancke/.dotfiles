@@ -42,6 +42,8 @@ brew "oasdiff"
 brew "pipx"
 # Theme for zsh
 brew "powerlevel10k"
+# Cross-shell prompt
+brew "starship"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Secrets management tool for developers

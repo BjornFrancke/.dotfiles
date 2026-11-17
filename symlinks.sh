@@ -25,6 +25,7 @@ SYMLINKS=(
     # Shell
     "zshrc/.zshrc:~/.zshrc"
     "p10k/.p10k.zsh:~/.p10k.zsh"
+    "starship/starship.toml:~/.config/starship.toml"
 
     # Tools
     # "fastfetch:~/.config/fastfetch"

@@ -1,4 +1,4 @@
-# Banner (must run before instant prompt preamble to avoid p10k console-output warning)
+# Banner
 echo "
  _____  ____    ____  ____     __  __  _    ___
 |     ||    \\  /    T|    \\   /  ]|  l/ ]  /  _]
@@ -8,11 +8,6 @@ echo "
 |  T   |  .  Y|  |  ||  |  \\     ||  .  ||     T
 l__j   l__j\\_jl__j__jl__j__j\\____jl__j\\_jl_____j
 "
-
-# Enable Powerlevel10k instant prompt (keep at top)
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 
 # Homebrew (skips the fork if a login shell already ran shellenv)
 [[ -z $HOMEBREW_PREFIX ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -29,14 +24,11 @@ source ~/dotfiles/zshrc/aliases.zsh
 source ~/dotfiles/zshrc/functions.zsh
 source ~/dotfiles/zshrc/history.zsh
 
-# Powerlevel10k
-source $HOMEBREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-
 # Zsh plugins
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+
 
 # fzf (Ctrl-R history, Ctrl-T files, Alt-C cd)
 source <(fzf --zsh)
@@ -47,6 +39,9 @@ source <(fzf --zsh)
 
 # Mise
 eval "$(mise activate zsh)"
+
+# Starship prompt (keep after mise/plugins)
+eval "$(starship init zsh)"
 
 # Google Cloud SDK
 if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then

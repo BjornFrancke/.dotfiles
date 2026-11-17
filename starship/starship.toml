@@ -1,0 +1,80 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Ayu Dark — matches ghostty, tmux, lazygit, fzf
+palette = 'ayu'
+
+format = """
+$os$directory$git_branch$git_status
+$character"""
+
+# Right prompt sits on the input line; only appears when there is something to show
+right_format = '$status$cmd_duration$jobs$nodejs$python$time'
+
+[palettes.ayu]
+cyan   = '#5CCFE6'
+yellow = '#FFCC66'
+green  = '#AAD94C'
+red    = '#FF6666'
+dim    = '#6C7380'
+
+[os]
+disabled = false
+format = '[$symbol ]($style)'
+style = 'yellow'
+
+[os.symbols]
+Macos = '󰇥'
+# Macos = ''
+
+
+[directory]
+style = 'bold cyan'
+truncation_length = 3
+truncate_to_repo = false
+truncation_symbol = '…/'
+format = '[$path]($style)[$read_only]($style) '
+
+[git_branch]
+symbol = ' '
+style = 'green'
+format = '[$symbol$branch]($style) '
+
+[git_status]
+style = 'yellow'
+format = '([$all_status$ahead_behind]($style) )'
+
+[character]
+success_symbol = '[❯](bold cyan)'
+error_symbol = '[❯](bold red)'
+vimcmd_symbol = '[❮](bold green)'
+
+[status]
+disabled = false
+symbol = '✘ '
+format = '[$symbol$status]($style) '
+style = 'red'
+
+[cmd_duration]
+min_time = 3000
+format = '[$duration]($style) '
+style = 'dim'
+
+[jobs]
+symbol = '✦'
+style = 'cyan'
+
+[nodejs]
+symbol = ' '
+style = 'green'
+format = '[$symbol$version]($style) '
+
+[python]
+symbol = ' '
+style = 'yellow'
+format = '[$symbol$version( \($virtualenv\))]($style) '
+
+[time]
+disabled = false
+time_format = '%H:%M'
+style = 'dim'
+format = '[$time]($style)'
